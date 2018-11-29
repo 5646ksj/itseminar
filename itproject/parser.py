@@ -1,26 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
-import json
-import os
-
-BASE_DIR=os.path.dirname(os.path.abspath(__file__))
-
-req=requests.get('https://datalab.naver.com/keyword/realtimeList.naver?where=search')
-
-html=req.text
+URL="https://comic.naver.com/webtoon/list.nhn?titleId=20853"
+html=get_html(URL)
+webtoon_list=list()
 soup=BeautifulSoup(html, 'html.parser')
 
-my_titles=soup.find(
-'#content > div > div.keyword_carousel > div > div > div:nth-child(1) > div > div > a > span'
-)
-
-print(my_titles)
-data ={}
-
-for title in my_titles:
-	data[title.text]=title.get('href')
-	print(data[title.text])
-with open (os.path.join(BASE_DIR, 'result.json'), 'w+') as json_file:
-	json.dump(data, json_file)
+webtoon_area=soup.find("tr",{"name":"INQ_DIS"}).find_all("td",{"class":"title"})
+for webtoon_index in webtoon_area:
+	info_soup=webtooon_index.find("a")
+	_url
+	
 	
 
