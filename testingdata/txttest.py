@@ -1,5 +1,5 @@
 import re
-f = open('output.txt','r')
+f = open('output.php','r')
 data = f.read()
 buf = str(data)
 line = buf.splitlines()
@@ -10,7 +10,7 @@ line = buf.splitlines()
  #   kk = re.split(l)}
 #for l in line:
 #    if line[l:l+1]== "USD<span style=\"font-size:11px;\">(미국 달러)</span>"
-print(line[0:12])
+print(line[0:2])
 
 f.close()
 

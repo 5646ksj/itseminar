@@ -1,0 +1,4567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">		<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var q_browserNavi =" ( 외환 | 환율 | 고시환율 | 환율조회 )";
+</script> 
+<title>환율조회 ( 외환 | 환율 | 고시환율 | 환율조회 )</title><meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="https://oimg1.kbstar.com/img/omweb/favi_iphone.png"/>
+<link rel="apple-touch-icon-precomposed" media="screen and (resolution:163dpi)" href="https://oimg1.kbstar.com/img/omweb/favi_ipad.png" />
+<link rel="apple-touch-icon-precomposed" media="screen and (resolution:326dpi)" href="https://oimg1.kbstar.com/img/omweb/favi_iphone4.png" />
+<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/base.css?201308022" />
+<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/layout/L000185.css?20151203" />
+<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/common.css?2017121502" />
+<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/design_pattern.css?20180420" /><link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/fex_nav.css?20150202" />
+
+<!-- kbstar.com 및 KB스타뱅킹 서비스 개편 2015 -->
+<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/ofex_nav_2015.css?20180905" />
+
+
+
+
+
+
+
+
+
+<link type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery-ui-1.8.16.css?201111202030" rel="stylesheet" />
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-1.6.4.min.js?201111202030" charset="utf-8"></script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery-ui-1.8.16.min.js?201111202030" charset="utf-8"></script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery_bgiframe_min.js?201111281730" charset="utf-8"></script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/jquery.validity.js?201111202030" charset="utf-8"></script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/common.js?201806150000" charset="utf-8"></script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/op_common.js?201808080000" charset="utf-8"></script>
+
+
+
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/ahnlab/astx2.min.js?201704030000" charset="utf-8"></script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/ahnlab/astx2_ml.min.js?201604150000" charset="utf-8"></script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/ahnlab/astx2_custom.js?201604150000" charset="utf-8"></script>
+
+
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/ahnlab/op_astx2.js?201811130000" charset="utf-8"></script>
+<script type="text/javascript">
+//<![CDATA[
+function fncCheckKBLayerPopup() {
+	var rtnVal = false;
+	try {
+		
+		$(parent.document).find('div').each(function(){
+			if(typeof($(this).attr('role')) != 'undefined' && $(this).attr('role')=='dialog') {
+				rtnVal= true;
+				return false;
+			}
+		});
+		
+	}catch(e){
+		
+	}
+	return rtnVal;
+}
+function layerPopupAhnlab(){
+	var url  = "/quics?page=C040621";
+	var sName = cookie.getCookie('AhnLab');
+	
+	if( sName != "notOpen_AhnLab" ){
+		if(!fncCheckKBLayerPopup()) {
+			caq.popup.iFrameShow('AhnLabInstall',caq.util.encodeURI(url),"",550);
+			caq.popupIframeAutoResize('AhnLabInstall',550,260);
+		}
+	}
+}
+
+function installgogo(val){
+	var sLangType      = "";
+	try{ sLangType = caq.getLangType(); }catch(e){}
+	var sMessage = "";
+	var sInstallPageCd = "C040531"; //TO-BE
+	//var sInstallPageCd = "C023664"; //AS-IS
+
+	if(sLangType == "ENG"){
+		sInstallPageCd = "C040532"; //TO-BE
+		//sInstallPageCd = "C025001"; //AS-IS
+		alert("Security program needs to be installed for a secure internet banking. Click [Confirm]to transfer to the install page.");
+		
+	}else if(sLangType == "CHN"){
+		sInstallPageCd = "C040534"; //TO-BE
+		//sInstallPageCd = "C024999" //AS-IS;
+		alert("安装安全程序后方可使用的服务。\n点击[确认]，则将进入安装页面。");
+		
+	}else if(sLangType == "JPN"){
+		sInstallPageCd = "C040538"; //TO-BE
+		//sInstallPageCd = "C025000"; //AS-IS
+		alert("安全なインタ?ネットバンキングのために、セキュリティプログラムの設置が必要です。 \n[確認]をクリックすると、設置ペ?ジへ移動します。");
+		
+	}else{//KOR
+		alert("안전한 인터넷뱅킹을 위하여 통합보안프로그램 설치가 필요합니다. \n[확인]을 클릭하시면 설치페이지로 이동합니다"+val);
+	}
+	document.location.href="/quics?page="+sInstallPageCd;
+}
+
+$(function(){
+	//ASTX2 초기화 함수 실행
+	$ASTX2_KB.init('');
+});
+
+
+
+
+//]]>
+</script>
+
+
+
+
+
+
+
+ 
+<script type="text/javascript">
+  //<![CDATA[
+  function OP_INTRO(){
+    var _Q_M_LOGIN_ = false;
+    var _Q_M_URL_   = "https://www.kbstar.com/";
+    try{
+      if(_Q_M_LOGIN_){
+        location.href = "/quics?page=C058242&amp;QSL=F";
+      }else{
+        location.href = _Q_M_URL_ ;
+      }
+    }catch(E){
+      location.href = _Q_M_URL_ ;
+    }
+  }
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+  caq.setLangType("KOR");     
+  caq.setDomainName("kbfex"); 
+  caq.setSiteName("ofex");     
+  $(function(){
+    caq.error.setErrorDiv(); 
+    caq.util.setUserAgent(); 
+    caq.util.setFormParameter('LOGIN_PAGE_FORM', '_REFERER_SITE_NAME=ofex'); 
+  });
+//]]>
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+  var _SITE_SystemLang = "KOR"; //"KOR", "ENG", "CHN", "JPN"
+//]]>
+</script>
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/nprotect/op_netizen.js?201411072359"></script>
+
+
+
+
+
+
+
+			
+			<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/jquery.mCustomScrollbar.css?20151203" />
+			<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/ocommon/common_2015.css?20181129" />
+			<script type="text/javascript" src="/common/jquery.mousewheel.min.js?20151203"></script>
+			<script type="text/javascript" src="/common/jquery.mCustomScrollbar.min.js?20151203"></script>
+			<script type="text/javascript" src="/common/js/common_2015.js?20171219"></script>
+
+
+
+
+<!-- 외환 공통 js 및 css include start -->
+<link rel="stylesheet" type="text/css" href="https://oimg1.kbstar.com/css/osite/fex.css?20180904" />
+<script type="text/javascript" src="https://oimg1.kbstar.com/js/common/common_ui.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="/ofex/js/cbf_common.js?201404150706" charset="utf-8"></script>
+<!-- 외환 공통 js 및 css include end -->
+					</head><body><div class="wrapAll" id="RENO_2015">	<div class="headerWrap">    	<div id="HEADER">			
+<div id="b037403">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+ // <![CDATA[
+ var TopMenu_AddFavorateType="1";
+//티커 'N' 표시
+function tikerCertConfigCheck(){
+	 var _KB_MENU_TIKER = cookie.getCookie("_KB_N_TIKER");
+ 
+	 if(_KB_MENU_TIKER==null){
+		 _KB_MENU_TIKER='';
+		 cookie.setCookie("_KB_N_TIKER", _KB_MENU_TIKER, cookie.getExpDate(1,0,0),'/',"kbstar.com");
+	 }	
+	 if(_KB_MENU_TIKER=="Y"){
+		 $("#NimgView").show();
+	 }else{
+		 $("#NimgView").hide();
+	 }
+}
+//개인화확인되면 'N'로 세팅처리
+function tikerCertConfigOn(){
+	cookie.setCookie("_KB_N_TIKER", 'N', cookie.getExpDate(1,0,0),'/',"kbstar.com");
+	$("#NimgView").hide();
+	//document.cookie="_KB_N_TIKER=N"
+}
+// 즐겨찾기 항목조회
+function fnMymenuSeacrh()
+{
+	var frm = document.addFavoriteForm;
+	
+	if($('#addLauncher').attr('class')!='on'){
+		frm.action = '/quics?page=C015690&QAction=556956&RType=json&USER_TYPE=02';
+		doAjaxAction(frm,'fnMymenuSeacrhBack');
+	}else{
+		$('#afMng').hide();
+		$("#addLauncher").removeClass('on');
+		$('#setFavorate').hide();
+	}
+	
+}
+//즐겨찾기 항목조회 콜백
+function fnMymenuSeacrhBack(data){
+	var repaymentCnt=data.msg.servicedata.OPEN_MYMENU.length;
+	var prePARENT_PAGE_ID="";
+	$("#tMenubody").remove();	
+	$('<ul id="tMenubody"></ul>').appendTo("#favorList");
+	$(".setLocaOption").remove();
+	
+	for(i = 0 ; i < repaymentCnt; i++){
+		var obj=data.msg.servicedata.OPEN_MYMENU[i];
+			
+			var	innerHtmlString='';
+			innerHtmlString+='<li class="'+obj.PAGE_ID+'" id='+i+'>';
+			
+			if(obj.IS_DIR=="F"){
+				innerHtmlString+='<a href=/quics?page='+obj.PAGE_ID+'>'+obj.DIR_NM+'</a>';
+			}else{
+				innerHtmlString+='<button type="button" onclick="toggleFavorGroup(this)">'+obj.DIR_NM+'</button>';
+			}
+			innerHtmlString+='</li>';
+				
+			if(obj.PARENT_PAGE_ID!=""){
+				if(obj.PARENT_PAGE_ID=="root" ){
+					
+					$(innerHtmlString).appendTo("#tMenubody");
+				}else{
+					
+					var aClass="."+obj.PARENT_PAGE_ID;
+					
+					aClass=$("li."+aClass);
+					var SubStr='';
+					if(prePARENT_PAGE_ID!=obj.PARENT_PAGE_ID){
+						SubStr+='<ul class="'+obj.PARENT_PAGE_ID+'">';
+						SubStr+=innerHtmlString;
+						SubStr+='</ul>';						
+					
+						$(SubStr).appendTo(aClass);
+					}else{
+					
+						var bClass="."+obj.PARENT_PAGE_ID;
+					
+						bClass=$("ul."+bClass);						
+						SubStr+=innerHtmlString;
+						$(SubStr).appendTo(bClass);
+				
+					}
+					prePARENT_PAGE_ID=obj.PARENT_PAGE_ID;
+				}
+			}
+		// 폴더일때만  select box  append		
+		if(obj.IS_DIR=="T"){
+				var strPageID=obj.PAGE_ID;
+				var strDirNm=obj.DIR_NM;
+				if(strDirNm==""){
+					strDirNm="홈";
+				}
+	
+				$("#setLoca").append('<option class="setLocaOption" value='+strPageID+'>'+strDirNm+'</option>');
+		}
+	}
+	
+	if(TopMenu_AddFavorateType=="1"){
+		addFavorate($("#addLauncher"));
+		$('#setFavorate').hide();
+	}
+	TopMenu_AddFavorateType="1";
+	//초기화
+	$("#SEARCH_PAGE").val("");	
+	$("#inputFavorName").val("");
+	$("#inputFolderName").val("");
+	
+}
+		
+//즐겨찾기페이지 값세팅
+function fnmenuSetPage(search_page,inputFavorName){
+	$("#SEARCH_PAGE").val(search_page);	
+	$("#inputFavorName").val(inputFavorName);
+	
+	TopMenu_AddFavorateType="99";
+	fnmenuAdd();
+	//TopMenu_AddFavorateType="99";
+}
+//즐겨찾기 추가 
+function fnmenuAdd(){
+	
+	var frm = document.addFavoriteForm;
+	$("#PARENT_PAGE_ID").val($('#setLoca option:selected').val());
+	if(!formAddFavoriteValidation()) return;
+	TopMenu_AddFavorateType="2";
+	frm.action = '/quics?page=C015690&QAction=556954&RType=json&USER_TYPE=02';
+	doAjaxAction(frm,'fnmenuAddBack');
+}
+function fnmenuAddBack(data){
+	
+	if(data.msg.servicedata.RESULT=="false"){
+		alert('즐겨찾기등록에 실패하였습니다.');
+		return;
+	}
+	if(data.msg.servicedata.ERROR_CODE!=""){
+		if(data.msg.servicedata.ERROR_CODE=="-5001"){
+			alert("디렉토리 등록 개수가 초과 초과하였습니다. 50개까지 등록가능합니다.");
+		}else if(data.msg.servicedata.ERROR_CODE=="-5002"){
+			alert("페이지 등록 개수가 초과하였습니다. 50개까지 등록가능합니다.");
+		}else if(data.msg.servicedata.ERROR_CODE=="-5003"){
+			alert("현재페이지는 등록된 페이지입니다.");
+		}else{ 
+			alert('즐겨찾기등록에 실패하였습니다.');
+		}
+		return;
+	}
+	
+	fnMymenuSeacrhBack(data);	
+}
+function formAddFavoriteValidation() {
+	 if(  $("#inputFavorName").val()=="" && $("#inputFolderName").val()==""  ) {
+		alert("이름을 입력하세요.");
+		 return false;
+	 }
+	 return true;
+}
+function FolderControl(){
+	$("#newFolder").toggle();	
+	if($("#newFolder").css("display")=='none'){
+		$("#inputFavorName").val("");		
+		$("#inputFavorName").attr("disabled",false);
+		$('#inputFavorName').focus();
+		$('#IfsetAddInput').attr('height','203');
+	}else{
+		$("#inputFavorName").val("");
+		$("#inputFavorName").attr("disabled",true);
+		$('#inputFolderName').focus();
+		$('#IfsetAddInput').attr('height','235');
+	}
+}
+	
+//즐겨찿기관리
+function goFavorite(){
+	var frm = document.TopMenuNullForm;	
+	var customType='';	
+	//개인
+	if(customType=="01"){		
+		frm.action = "/quics?page=C022018";
+	//법인
+	}else{
+		frm.action = "/quics?page=C025192";
+	}
+	frm.submit();
+}
+//개인화바로가기
+function goPersonal(){
+	var frm = document.TopMenuNullForm;
+	
+	
+	var customType='';	
+	//개인
+	if(customType=="01"){		
+		frm.action = "/quics?page=C030242";
+	//법인
+	}else{
+		frm.action = "/quics?page=C021598";
+	}
+	tikerCertConfigOn();
+	frm.submit();
+}
+	
+function setFavorate(){
+	
+	$('#setFavorate').show();
+	$("#inputFavorName").attr("disabled",false);
+	$('#inputFavorName').focus();
+	$("#inputFavorName").val("");
+	$("#inputFolderName").val("");
+	$("#newFolder").hide();
+	
+}
+function closeSetFavorate(){
+	$('#setFavorate').hide();
+	$('#setFavorLauncher').focus();
+}
+	
+function toggleFavorGroup(obj){	
+	$(obj).toggleClass('on').next().toggle();
+	if($('#favorList button.on').length > 0){
+		$('#favorList>ul').addClass('on');
+		$('#IfafMng').attr('height','290');
+	} else {
+		$('#favorList>ul').removeClass('on');
+		$('#IfafMng').attr('height','194');
+	}
+}
+/*
+if(''!='N'){	
+	tikerCertConfigCheck();
+}
+*/
+  // ]]>
+</script>
+
+
+
+        
+
+<form name="TopMenuNullForm" method="post" action="">
+</form>  
+      
+
+<form name="LOGIN_PAGE_FORM" id="LOGIN_PAGE_FORM" method="post" style="line-height:0px;"  action="/quics?page=C018897"></form>
+
+
+
+	<div id="header_content">
+		<div id="skipNav">
+			<a href="#CP">본문 바로가기</a>
+		</div>
+		<div class="titPers">
+			<div id="svcTitle">
+				<h1 class="logo"><a href="javascript:OP_INTRO();"><img src="https://oimg1.kbstar.com/img/ocommon/2015/kb_logo.png" alt="KB국민은행" class="png24" /></a></h1>
+			</div>
+			<div id="personal">
+				<h1 class="svc"><a href="/quics?page=ofex"><img src="https://oimg1.kbstar.com/img/ocommon/2015/tit_ofex.png" alt="외환" class="png24" /></a></h1>
+				<ul class="certMenu">
+				
+				
+					
+					
+												
+					<li><a href="javascript:document.LOGIN_PAGE_FORM.submit();"><img src="https://oimg1.kbstar.com/img/ocommon/2015/btn_login.gif" alt="로그인" /></a></li>										
+					<li><a href="/quics?page=C018872"><img src="https://oimg1.kbstar.com/img/ocommon/2015/btn_cert.gif" alt="공인인증센터" /></a></li>
+					
+					
+					
+				
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+
+<script type="text/javascript">
+
+
+
+	
+</script>
+</div>
+
+<div id="b037404">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	<div class="gnbWrap_2015">
+		<h2 class="vn">전체메뉴</h2>
+		<ul id="gnb_2015" class="gnb_2015">
+			
+				
+				
+				<li><h3><a href="/quics?page=obank"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_bank.png" alt="개인" class="png24" /></a></h3></li>
+				
+			
+			
+				
+				
+				<li><h3><a href="/quics?page=obiz"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_biz.png" alt="기업" class="png24" /></a></h3></li>
+						
+			
+
+
+	        <li><h3><a href="/quics?page=onmoney"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_money.png" alt="자산관리" class="png24" /></a></h3></li>
+	        <li><h3><a href="/quics?page=kbland"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_land.png" alt="부동산" class="png24" /></a></h3></li><!-- 2017-05-17 추가 -->
+	        <li><h3><a href="/quics?page=ofex"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_ofex.png" alt="외환" class="png24" /></a></h3></li><!-- 2018-11-12 추가 -->
+	        <li><h3><a href="/quics?page=opensn"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_opensn.png" alt="퇴직연금" class="png24" /></a></h3></li><!-- 2018-11-12 추가 -->
+			<li><h3>	<a href="https://card.kbcard.com" target="_blank"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_card.png" alt="카드" class="png24" /></a></h3></li>
+
+			<li><h3><a href="#"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_service.png" alt="전체서비스" class="png24" /></a></h3>
+				<div class="gnbAll dep2">
+					<span class="arrow"></span>
+					<ul>
+						<li class="cate w1">
+							<span class="tit">금융서비스</span>
+							<ul>
+								<li><a href="/quics?page=ofex">외환</a></li>							
+								<li><a href="/quics?page=opensn">퇴직연금</a></li>
+								<li><a href="/quics?page=oescrow">에스크로이체</a></li>
+								<li><a href="/quics?page=osenior">골든라이프뱅킹</a></li>
+							<!-- <li><a href="/quics?page=otalk">KB드림톡적금</a></li> 2017-05-29 -->
+							<!--<li><a href="/quics?page=oshift">자동이체통합관리</a></li>  2018-11-12 -->
+								<li><a href="/quics?page=osecure">보안센터</a></li>
+								<li><a href="/quics?page=C018872">공인인증센터</a></li>
+								<li><a href="/quics?page=C043279">KB마이머니</a></li>
+								<li><a href="https://cms.kbstar.com/quics?page=ocms">Star CMS</a></li>
+							</ul>
+						</li>
+						<li class="cate w2">
+							<span class="tit">특화서비스</span>
+							<ul>
+								<!-- <li><a href="/quics?page=rstar">KB부동산</a></li> -->
+								<li><a href="/quics?page=ohsubs">주택청약</a></li>
+	                                        <li><a href="/quics?page=onhbond">국민주택채권</a></li>
+								<li><a href="/quics?page=onhouse">주택도시기금</a></li>
+								<li><a href="/quics?page=omobile">스마트금융서비스</a></li>
+							</ul>
+						</li>
+						<li class="cate w3">
+	
+	
+							<span class="tit">멤버십서비스</span>
+							<ul>
+								<li><a href="/quics?page=omember">KB고객우대제도</a></li>	
+								<!--<li class="line2"><a href="/quics?page=omate">KB금융그룹통합멤버십<br />(Liiv Mate)</a></li>-->
+								<!--li><a href="http://www.kbrockstar.com" target="_blank" title="새창"><span class="link_blank">樂스타블로그</span></a></li-->
+								<li><a href="/quics?page=ognw">GOLD&amp;WISE</a></li>
+							</ul>
+						</li>
+						<li class="cate w4">
+							<span class="tit">KB와 함께</span>
+							<ul>
+								<li><a href="/quics?page=oabout">은행소개</a></li>
+								<li><a href="/quics?page=C016505">지점안내</a></li>
+								<li><a href="/quics?page=osupp">고객센터</a></li>
+								<li><a href="/quics?page=oblog">KB정보광장</a></li>
+								<li><a href="/quics?page=oevent">이벤트</a></li>
+								<li><a href="/quics?page=ohope">희망금융클리닉</a></li>
+	                                          <li><a href="/quics?page=olovekr">나라사랑서비스</a></li>
+								<li><a href="http://www.kbgoodjob.com" target="_blank" title="새창"><span class="link_blank">KB굿잡</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li><h3><a href="#"><img src="https://oimg1.kbstar.com/img/ocommon/2015/gnb_global.png" alt="Global" class="png24" /></a></h3>
+				<div class="gnbGlobal dep2">
+					<span class="arrow"></span>
+					<div>
+						<ul>
+							<li>
+							<h4>LANGUAGE</h4>
+								<ul>
+									<li><a href="/quics?page=oeng">English</a></li>
+									<li><a href="/quics?page=ochn">Chinese</a></li>
+									<li><a href="/quics?page=ojpn">Japanese</a></li>
+								</ul>
+							</li>
+							<li>
+								<h4><a href="https://global.kbstar.com/quics?page=ogcom" target="_blank" title="새창">KB GLOBAL BANKING</a></h4>
+								<ul>
+									<li><a href="https://global.kbstar.com/quics?page=ogtk" target="_blank" title="새창"><img src="https://oimg1.kbstar.com/img/ocommon/2015/icon_japan.png" alt="Japan" /><span class="link_blank">Japan</span></a></li>
+									<li><a href="https://global.kbstar.com/quics?page=ogauc" target="_blank" title="새창"><img src="https://oimg1.kbstar.com/img/ocommon/2015/icon_newzealand.png" alt="New Zealand" /><span class="link_blank">New Zealand</span></a></li>
+									<li><a href="http://www.kbstarchina.com/" target="_blank" title="새창"><img src="https://oimg1.kbstar.com/img/ocommon/2015/icon_china.png" alt="China" /><span class="link_blank">China</span></a></li>
+									<li><a href="https://global.kbstar.com/quics?page=oghk" target="_blank" title="새창"><img src="https://oimg1.kbstar.com/img/ocommon/2015/icon_hongkong.png" alt="Hong Kong" /><span class="link_blank">Hong Kong</span></a></li>
+									<li class="lan_uk"><a href="https://global.kbstar.com/quics?page=ogld" target="_blank" title="새창"><img src="https://oimg1.kbstar.com/img/ocommon/2015/icon_uk.png" alt="UK" /><span class="link_blank">UK</span></a></li>
+									<li class="lan_com"><a href="https://global.kbstar.com/quics?page=ogcbd" target="_blank" title="새창"><img src="https://oimg1.kbstar.com/img/ocommon/2015/icon_cambodia.png" alt="Cambodia" /><span class="link_blank">Cambodia</span></a></li>
+									<li class="lan_viet"><a href="https://global.kbstar.com/quics?page=oghcm" target="_blank" title="새창"><img src="https://oimg1.kbstar.com/img/ocommon/2015/icon_vietnam.png" alt="Vietnam" /><span class="link_blank">Vietnam</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="search">
+	
+	<h3><a href="#search_container_2015" id="search_icon" style="{cursor:pointer;}" onclick="javascript:openSearch();" class="btn_gnb_search"><img src="https://oimg1.kbstar.com/img/ocommon/2015/btn_search.png" alt="검색(통합검색)" class="png24" /></a></h3>
+	
+	
+		
+				<div id="search_container_2015">
+					<div class="marginSpace">
+						<div class="search_con_box">
+							<div class="search_form">
+								<ul class="onClickJS">
+									
+									<li class="tabList on"><a href="#" class="tab_search tabLink"><span class="blind">키워드검색</span></a>																		    										
+										<div class="tabCont">
+											<form name="TopTotalSearchForm" id="TopTotalSearchForm" method="get" action="/quics" onsubmit="return false;">
+												<input type="hidden" name="page"                               	value="C020697" />											
+												<input type="hidden" name="검색설정명"		id="검색설정명"     	value="total"/>
+												<input type="hidden" name="검색출력량"		id="검색출력량"     	value="3"/>
+												<input type="hidden" name="검색페이지번호"		id="검색페이지번호" 	value="1"/>
+												<div class="search_inp_box">
+													<input type="text" name="검색어" id="검색어" title="검색어를 입력하세요." class="search_inp" onkeypress="if (event.keyCode==13) { TopTotalSearchFormSearch(); event.returnValue=false; }" value="검색어를 입력하세요" />
+													<a href="#" class="btn_inp_search" onclick="TopTotalSearchFormSearch(); return false;"><img src="https://oimg1.kbstar.com/img/ocommon/2015/btn_inp_search.png" alt="검색" /></a>
+												</div>
+											</form>
+												<div class="favor_word">								
+													<p class="head">인기검색어</p>
+													<ul class="w_list_box">
+														<li>.</li>
+													
+													</ul>
+												</div>										
+										</div>
+									</li>
+									
+									
+									<li class="tabList"><a href="#" class="tab_info tabLink"><span class="blind">지점안내</span></a>
+										<form id="gnbBranchSearchForm" name="gnbBranchSearchForm" method="post" action="">
+											<input type="hidden" id="gnbSearchData1" name="gnbSearchData1" value="" />
+											<input type="hidden" id="gnbSearchData2" name="gnbSearchData2" value="" />
+											<input type="hidden" id="선택검색번호" name="선택검색번호" value="3" />
+										<div class="tabCont">
+											<ul class="search_radio_box_2015">
+											
+												
+												<li class="branch on">
+													<div class="search_radio">
+														<span class="radio_list on">                                           
+															<label for="radio_s1">지점검색</label>
+															<input type="radio" id="radio_s1" name="inp_radio" checked="checked" />
+														</span>
+													</div>
+													<div class="select_info">
+														<select name="searchSel2" id="searchSel2" class="selectBox_2015" title="지점검색 선택">
+															<option value="0">지역명(도로명)</option>
+															<option value="1">지역명(지번)</option>
+															<option value="2">가까운주소/지하철명</option>
+															<option value="3">지점명(점번코드)</option>
+														</select>
+														<label for="searName2" class="blind">지점검색입력</label>
+														<input type="text" name="searName2" id="searName2" onkeypress="if (event.keyCode==13) { goBranchInq('C016505',$('#searName2'),$('#searchSel2')); event.returnValue=false; }" value=""/>
+														<button type="button" class="btn_search" onclick="goBranchInq('C016505',$('#searName2'),$('#searchSel2'));">검색</button>
+													</div>
+												</li>
+												
+												
+												
+												<li class="auto_corner">
+													<div class="search_radio">
+														<span class="radio_list">
+															<label for="radio_s2">자동화코너검색</label>
+															<input type="radio" id="radio_s2" name="inp_radio" />
+														</span>
+													</div>
+													<div class="select_info">
+														<select name="searchSel3" id="searchSel3" class="selectBox_2015" title="자동화코너 선택">
+															<option value="0">지역명(도로명)</option>
+															<option value="1">지역명(지번)</option>
+															<option value="2">가까운주소/지하철명</option>
+															<option value="3">자동화코너명</option>
+														</select>
+														<label for="searName3" class="blind">지점검색입력</label>
+														<input type="text" name="searName3" id="searName3" onkeypress="if (event.keyCode==13) { goBranchInq('C016506',$('#searName3'),$('#searchSel3')); event.returnValue=false; }" value=""/>
+														<button type="button" class="btn_search" onclick="goBranchInq('C016506',$('#searName3'),$('#searchSel3'));">검색</button>
+													</div>
+												</li>
+												
+												
+											</ul>
+										</div>
+										</form>
+									</li>
+									
+								</ul>
+							</div>
+	
+								<a style="left:1131px" href="javascript:close_search();" class="btn_close">검색 닫기</a>
+	
+						</div>
+					</div>
+				</div>
+	
+				<!-- end search_container_2015 -->
+	
+			</li>
+		</ul>
+	</div>
+	
+	
+
+
+
+<script type="text/javascript">
+<!--
+
+	
+	//ajax 통신.
+	function openSearch(){
+
+		// var pars ={};
+
+		$.ajax({
+			url:"/quics?asfilecode=728600",
+			type:"post",
+			
+			
+			success:function(returnData){
+
+				openSearch2(returnData);
+
+			}, error:function(e){
+
+			}
+		});
+	}
+
+
+
+	function openSearch2(data){
+
+		$(".w_list_box").empty();
+	 
+		var data_arr = data.split(":");
+ 
+
+		for (var i = 0; i<data_arr.length-1; i++ ) {
+
+			var tag = "<li><a href='javascript:search(" +'"'+ data_arr[i] +'"'+ ")';>"+data_arr[i]+"</a><span class='bar'></span></li>";
+		 
+			$(".w_list_box").append(tag);
+		}
+
+		// sliding
+		var target = $("#search_container_2015");
+		var eff = 'easeInExpo';
+		target.find(".tab_search").focus();
+		$("#gnb_2015").css("z-index","9999");
+
+		/*2017.08.24 open하자마자 포커스이동*/
+		$("#검색어").focus();
+		$("#검색어").click();
+		
+		setTimeout("hideHeader()",700); 
+
+
+		target.slideDown(700,eff);
+	}
+
+	function hideHeader(){
+
+		var liNode = document.getElementById("gnb_2015").childNodes;
+
+		for(var i = 0; i<liNode.length; i++) {
+		
+			if(liNode[i].className == "search") {
+				break;
+			} else {
+				var liNode_ = liNode[i];
+				$(liNode_).css("display","none");
+			}
+		}		
+	}
+
+
+
+
+	function close_search() {
+		var target = $("#search_container_2015");
+		var eff = 'easeInExpo';
+		target.slideUp(700,eff);		
+		$("#gnb_2015").css("z-index","0");
+		$("#gnb_2015").focus();
+		// 닫기버튼 위치, style="left: 1011px;"
+
+		var liNode = document.getElementById("gnb_2015").childNodes;
+
+		for(var i = 0; i<liNode.length; i++) {
+		
+			if(liNode[i].className == "search") {
+				break;
+			} else {
+				var liNode_ = liNode[i];
+				$(liNode_).css("display","block");
+			}
+		}		
+
+
+		$("#search_icon").focus();
+
+	}
+
+ 
+	function TopTotalSearchFormSearch(){
+		var form=document.TopTotalSearchForm;	
+		form.검색어.value = removeSChar(form.검색어.value);
+		form.submit();
+	}
+
+	function removeSChar(str){
+		var s = [ "[" , "'" , "\\" , '"'  , "#" , "(" , ")" , "@" , ";" , "=" , "*"  ,"+" , "]" ,"<" ,">" ] ;
+		for( var i=0 ; i<s.length ; i++ ){
+			str =  str.split(s[i]).join(" ")
+		}
+		return str;
+	}
+	
+	function cardSSOAlert(){
+		alert("2014년 8월 5일(화)부터 은행/카드 홈페이지間 자동 로그인 중단으로 카드서비스는 KB국민카드 홈페이지에서 별도 로그인 후 이용하실 수 있습니다.");
+//		location.href='/quics?page=C025720&amp;QLS=F&amp;connectSite=Card&amp;connectUrl=CXPPPZZC0000.cms';
+	}
+
+	$(function(){
+		$('#TopTotalSearchForm > input[name=검색어]').bind('keyup', function(e){
+			if(e.keyCode ==13 ){
+				TopTotalSearchFormSearch();
+			}
+		})
+	});
+
+
+ 
+	
+	function goBranchInq(valUrl, valueId, selectId) {
+		var form = document.gnbBranchSearchForm;		
+		if(valCheck(valueId)){					
+			if("C016505" == valUrl) {				
+				form.gnbSearchData1.value = $(valueId).val(); 
+			} else if("C016506" == valUrl) {				
+				form.gnbSearchData2.value = $(valueId).val(); 
+			}
+			form.선택검색번호.value = $(selectId).val(); 
+			form.action = "/quics?page="+valUrl;
+			form.submit();
+		} else {
+			return;
+		}
+	}
+	
+	function valCheck(valueId) {
+
+		var isNotEmpty = false;
+		var chkValue = $(valueId).val();
+		
+		if($.trim(chkValue) == "") {
+			alert("검색할 단어를 입력하여 주십시오.");
+			$(valueId).focus();
+		} else {
+			isNotEmpty = true;
+		}
+		
+		return isNotEmpty;
+	}
+	
+	$("#검색어").click(function(){		
+		var text = $(this).val();
+		if(text = "검색어를 입력하세요") {
+			$(this).val("");
+		}				
+	});	
+
+	// **************************************************************************
+	// 인기어 클릭 시 
+	//***************************************************************************
+	function search(pword){
+		var form=document.TopTotalSearchForm;	
+		form.검색어.value = removeSChar(pword);
+		TopTotalSearchFormSearch();
+	}
+
+ 
+
+
+
+-->
+</script>
+</div>
+
+<div id="b037558">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SNB 시작 -->
+
+		
+		<h2 class="vn">외환 서비스 메뉴</h2>
+		<ul id="snb_2015" class="snb_2015">
+			<li class="cate m1">
+					<a href='/quics?page=C015688' class="activated">환율</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C015689'>고시환율</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015690'>환율조회</a></li>
+										<li><a href='/quics?page=C015702'>환가료율조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C018602'>맞춤환율통지서비스</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015705'>맞춤환율 통지서비스 안내</a></li>
+										<li><a href='/quics?page=C015703'>맞춤환율 통지서비스 등록</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C018603'>무료환율표서비스</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C018604'>서비스 안내</a></li>
+										<li><a href='/quics?page=C018605'>서비스 신청</a></li>
+										<li><a href='/quics?page=C018606'>신청내역조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015701'>환율추이 및 시장동향</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015706'>일중환율변동추이</a></li>
+										<li><a href='/quics?page=C015707'>기간별환율변동추이</a></li>
+										<li><a href='/quics?page=C015709'>금일외환시장동향</a></li>
+										<li><a href='/quics?page=C015710'>주간외환시장동향</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C029406' onclick="window.open('/quics?page=C021529&amp;QSL=F', '환율계산기', 'width = 870, height = 630, menubar=no, scrollbars=yes'); return false;; return false;">환율계산기</a>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m2">
+					<a href='/quics?page=C015715'>환전</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C015717'>KB네트워크환전<br />(계좌 보유 고객)</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015719'>사실때</a></li>
+										<li><a href='/quics?page=C055869'>KB-POST 외화 배달서비스</a></li>
+										<li><a href='/quics?page=C015933'>환전내역/되팔기/변경</a></li>
+										<li><a href='/quics?page=C036676'>환전메시지(SMS) 재전송</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C040059'>KB네트워크환전<br />(계좌 미보유 고객)</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C040060'>사실때</a></li>
+										<li><a href='/quics?page=C040061'>환전신청조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C036559'>KB외화기프티콘</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C036560'>선물하기</a></li>
+										<li><a href='/quics?page=C036562'>선물 되팔기</a></li>
+										<li><a href='/quics?page=C036561'>선물메시지(SMS) 재전송</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015728'>맞춤환전</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015935'>등록</a></li>
+										<li><a href='/quics?page=C015934'>조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015730'>공동환전</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015936'>진행중인공동환전조회</a></li>
+										<li><a href='/quics?page=C015937'>공동환전등록내역조회</a></li>
+										<li><a href='/quics?page=C015938'>등록</a></li>
+										<li><a href='/quics?page=C015939'>환전</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015732'>환전내역조회</a>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015734'>외화수표추심조회</a>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C030143'>거래확인증</a>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m3">
+					<a href='/quics?page=C015779'>송금</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C015940'>해외송금</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C018636'>해외은행송금</a></li>
+										<li><a href='/quics?page=C040694'>KB무계좌 해외송금<br />(ACCOUNT-FREE)</a></li>
+										<li><a href='/quics?page=C041603'>KB글로벌 바로송금</a></li>
+										<li><a href='/quics?page=C039180'>해외송금기타전문</a></li>
+										<li><a href='/quics?page=C015947'>맞춤송금</a></li>
+										<li><a href='/quics?page=C015948'>공동송금</a></li>
+										<li><a href='/quics?page=C015949'>월드링크수표발행</a></li>
+										<li><a href='/quics?page=C055295'>기업전용송금</a></li>
+										<li><a href='/quics?page=C015951'>외국환거래은행지정</a></li>
+										<li><a href='/quics?page=C015956'>해외은행 BIC(SWIFT)코드조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015942'>국내간 송금</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015943'>당행외화이체</a></li>
+										<li><a href='/quics?page=C015944'>외화자동이체</a></li>
+										<li><a href='/quics?page=C015941'>타행외화이체</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015946'>해외은행예약송금</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C018647'>인터넷정기예약송금</a></li>
+										<li><a href='/quics?page=C018648'>KB WISE 해외송금</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015952'>조회</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C018796'>송금조회</a></li>
+										<li><a href='/quics?page=C018797'>전신문(SWIFT)조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015954'>거래확인증</a>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015955'>영문정보등록(변경)</a>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m4">
+					<a href='/quics?page=C015693'>외화예금</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C015780'>예금조회</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015957'>외화예금전계좌조회</a></li>
+										<li><a href='/quics?page=C015958'>자동연장거래내역조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015783'>입출금</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015959'>외화예금입금</a></li>
+										<li><a href='/quics?page=C015960'>원화예금입금</a></li>
+										<li><a href='/quics?page=C015961'>대고객시장연동매매율신청</a></li>
+										<li><a href='/quics?page=C015964'>거래확인증</a></li>
+										<li><a href='/quics?page=C015965'>예금추가입금</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015784'>예금신규</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015966'>신규</a></li>
+										<li><a href='/quics?page=C015967'>신규결과조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015787'>예금해지</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015972'>해지예상조회</a></li>
+										<li><a href='/quics?page=C015973'>해지</a></li>
+										<li><a href='/quics?page=C027523'>해지결과조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C018635'>외화예금 금리조회</a>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015770'>외화대출</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015929'>외화대출내역조회</a></li>
+										<li><a href='/quics?page=C015930'>외화대출원리금납부</a></li>
+										<li><a href='/quics?page=C015932'>외화대출기한전상환</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m5">
+					<a href='/quics?page=C015691'>수출입 전자무역</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C015713'>수출</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015820'>Less/Delay/Charge 납부</a></li>
+										<li><a href='/quics?page=C015823'>수출환어음부도 대전상환</a></li>
+										<li><a href='/quics?page=C015810'>수출조회</a></li>
+										<li><a href='/quics?page=C015812'>한도조회</a></li>
+										<li><a href='/quics?page=C015814'>전문조회</a></li>
+										<li><a href='/quics?page=C015826'>수출서류추적서비스<br />(K-track)</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015756'>수입</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015849'>수입신용장개설</a></li>
+										<li><a href='/quics?page=C018653'>수입결제</a></li>
+										<li><a href='/quics?page=C015851'>L/G발급신청</a></li>
+										<li><a href='/quics?page=C015864'>수입e-Navi</a></li>
+										<li><a href='/quics?page=C015860'>수입조회</a></li>
+										<li><a href='/quics?page=C015861'>한도조회</a></li>
+										<li><a href='/quics?page=C015862'>전문조회</a></li>
+										<li><a href='/quics?page=C015863'>선사용L/G발급조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015760'>내국신용장</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015885'>Term Charge/수수료납부</a></li>
+										<li><a href='/quics?page=C015886'>내국신용장결제</a></li>
+										<li><a href='/quics?page=C015887'>내국신용장대지급상환</a></li>
+										<li><a href='/quics?page=C015888'>내국신용장환어음매입<br />(추심)신청</a></li>
+										<li><a href='/quics?page=C015889'>내국신용장조회</a></li>
+										<li><a href='/quics?page=C015890'>한도조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015762'>무역금융</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015898'>무역금융상환</a></li>
+										<li><a href='/quics?page=C015899'>무역금융신청</a></li>
+										<li><a href='/quics?page=C015900'>무역금융이자납부</a></li>
+										<li><a href='/quics?page=C015901'>무역금융기한연장 신청</a></li>
+										<li><a href='/quics?page=C015902'>무역금융조회</a></li>
+										<li><a href='/quics?page=C015903'>한도조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015764'>전자무역(EDI)</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C035851'>서비스안내</a></li>
+										<li><a href='/quics?page=C035850'>서비스가입</a></li>
+										<li><a href='/quics?page=C035847'>서비스이용</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C058750'>T/F 금융상품</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C058751'>KB 글로벌 구매론</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015766'>수출입지원제도</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015926'>해외거래처신용조사</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015767'>모바일통지</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015927'>신청</a></li>
+										<li><a href='/quics?page=C015928'>조회/변경</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C040540'>수출입통계정보서비스(BANK TRASS)</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C040542'>서비스안내/회원가입</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C048290'>수출입통관상담<br />서비스</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C048291'>서비스 안내/이용방법</a></li>
+										<li><a href='/quics?page=C048292'>수입통관</a></li>
+										<li><a href='/quics?page=C048293'>수출통관</a></li>
+										<li><a href='/quics?page=C048294'>관세환급/사전심사제도</a></li>
+										<li><a href='/quics?page=C048297'>FTA/원산지</a></li>
+										<li><a href='/quics?page=C048298'>AEO 인증</a></li>
+										<li><a href='/quics?page=C048299'>관세심사/외환조사</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m6">
+					<a href='/quics?page=C015696'>FX / 파생상품</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C015698'>거래안내</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C016079'>거래상품 안내</a></li>
+										<li><a href='/quics?page=C016080'>거래절차 안내</a></li>
+										<li><a href='/quics?page=C016081'>거래관련 FAQ</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C045940'>선물환거래</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C045941'>선물환 거래안내</a></li>
+										<li><a href='/quics?page=C045942'>선물환율 조회</a></li>
+										<li><a href='/quics?page=C045943'>선물환 신청/체결</a></li>
+										<li><a href='/quics?page=C045944'>선물환 결제</a></li>
+										<li><a href='/quics?page=C015697'>정보조회</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015699'>환위험 관리</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C016082'>환위험의 이해</a></li>
+										<li><a href='/quics?page=C016083'>환위험 관리의 이해</a></li>
+										<li><a href='/quics?page=C016084'>환위험 관리 절차</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C025511'>KB환율픽(Pick)<br />(실시간 환전서비스)</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C025550'>이용안내</a></li>
+										<li><a href='/quics?page=C046489'>서비스 조회/신청/변경</a></li>
+										<li><a href='/quics?page=C025513'>거래주문/변경/취소</a></li>
+										<li><a href='/quics?page=C046316'>원클릭주문<br />(시장가 간편주문)</a></li>
+										<li><a href='/quics?page=C025515'>거래주문내역조회</a></li>
+										<li><a href='/quics?page=C025512'>환율고시</a></li>
+										<li><a href='/quics?page=C025514'>환율고시내역조회</a></li>
+										<li><a href='/quics?page=C025726'>공지사항</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m7">
+					<a href='/quics?page=C015694'>외환가이드</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C015789'>송금</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C015979'>서비스</a></li>
+										<li><a href='/quics?page=C015980'>유형별송금방법</a></li>
+										<li><a href='/quics?page=C015981'>외국환거래 지정 안내</a></li>
+										<li><a href='/quics?page=C015982'>국내에서 해외송금 받으실때</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015791'>환전</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C016004'>KB네트워크환전</a></li>
+										<li><a href='/quics?page=C040270'>KB네트워크환전<br />(계좌 미보유 고객)</a></li>
+										<li><a href='/quics?page=C056495'>KB-POST 외화 배달 서비스</a></li>
+										<li><a href='/quics?page=C038663'>KB외화기프티콘</a></li>
+										<li><a href='/quics?page=C040134'>KB외화 ATM 환전</a></li>
+										<li><a href='/quics?page=C016005'>맞춤환전</a></li>
+										<li><a href='/quics?page=C016006'>공동환전</a></li>
+										<li><a href='/quics?page=C016007'>외화현찰환전</a></li>
+										<li><a href='/quics?page=C016008'>여행자수표(T/C)환전</a></li>
+										<li><a href='/quics?page=C016010'>외화수표환전</a></li>
+										<li><a href='/quics?page=C016011'>국내외겸용 직불카드</a></li>
+										<li><a href='/quics?page=C016012'>유형별환전방법</a></li>
+										<li><a href='/quics?page=C016013'>환전혜택안내</a></li>
+										<li><a href='/quics?page=C016014'>외국통화안내</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015793'>예금상품안내</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C016031'>외화예금 이용안내</a></li>
+										<li><a href='/quics?page=C040265'>외화예금 상품비교</a></li>
+										<li><a href='/quics?page=C016032'>외화예금 상품안내</a></li>
+										<li><a href='/quics?page=C016033'>외화예금 계정종류</a></li>
+										<li><a href='/quics?page=C016034'>비거주자 원화예금거래</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015796'>무역가이드</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C016048'>수출거래가이드</a></li>
+										<li><a href='/quics?page=C016049'>수입거래가이드</a></li>
+										<li><a href='/quics?page=C016050'>무역금융가이드</a></li>
+										<li><a href='/quics?page=C016051'>내국신용장</a></li>
+										<li><a href='/quics?page=C016052'>전자무역(EDI) 가이드</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C015802'>외환프라자</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C016071'>외환프라자소개</a></li>
+										<li><a href='/quics?page=C016047'>위치 및 방문상담</a></li>
+										<li><a href='/quics?page=C029535'>월드종합서비스 신청</a></li>
+										<li><a href='/quics?page=C029536'>월드종합서비스 접수현황</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C021876'>외환서식 프로그램</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C023192'>프로그램 안내</a></li>
+										<li><a href='/quics?page=C023193'>설치/제거방법</a></li>
+										<li><a href='/quics?page=C023194'>사용방법</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C023944'>외환포탈이용안내</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C023887'>이용시간안내</a></li>
+										<li><a href='/quics?page=C023945'>거래수수료안내</a></li>
+										<li><a href='/quics?page=C023946'>이용시 혜택안내</a></li>
+										<li><a href='/quics?page=C023947'>개인고객을위한안내</a></li>
+										<li><a href='/quics?page=C023948'>기업고객을위한안내</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m8">
+					<a href='/quics?page=C046311'>마이딜링룸</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C046312'>외환시황</a>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C046313'>KB외화상품</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C047737' onclick="location.href='/quics?page=C025550&amp;QSL=F'; return false;">KB 환율픽(Pick)<br />(실시간 환전서비스)</a></li>
+										<li><a href='/quics?page=C047738' onclick="location.href='/quics?page=C015966&amp;QSL=F'; return false;">KB 외화정기예금</a></li>
+										<li><a href='/quics?page=C047739' onclick="location.href='/quics?page=C016622&amp;QSL=F'; return false;">KB 골드뱅킹</a></li>
+										<li><a href='/quics?page=C047740' onclick="location.href='/quics?page=C046302&amp;QSL=F'; return false;">선물환</a></li>
+										<li><a href='/quics?page=C047741' onclick="location.href='/quics?page=C027853&amp;QSL=F'; return false;">포인트리 골드전환</a></li>
+										<li><a href='/quics?page=C055866'>KB YES 모아 펀드</a></li>
+									</ul>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C046314'>나의 외화자산</a>
+								</li>
+								<li><a class="sub_tit" href='/quics?page=C046315'>투자정보</a>
+									<ul class="sub_tit_list">
+										<li><a href='/quics?page=C046466'>시장동향/리포트</a></li>
+										<li><a href='/quics?page=C046467'>외환 News</a></li>
+										<li><a href='/quics?page=C046607'>증시일정</a></li>
+										<li><a href='/quics?page=C046471'>FAQ</a></li>
+										<li><a href='/quics?page=C046472'>공지사항</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					<li class="cate m9">
+					<a href='/quics?page=C060020'>KB ONE TRADE</a>
+						<div class="cate_sub">
+							<ul>
+								<li><a class="sub_tit" href='/quics?page=C060003'>서비스소개</a>
+								</li>
+							</ul>
+						</div>
+						
+					</li>
+					
+		</ul>					
+	
+
+<!-- SNB 끝 -->
+
+<div id="menu_all_2015"><a href="#" class="btn_menu"><span class="blind">KB국민은행 전체메뉴 보기</span></a></div>
+	
+<!-- 전체 메뉴 시작 -->
+<div id="menu_all_con_2015">	
+	<div class="menuAllArea_2015">
+		<div class="menuAllWrapper_2015">
+			<h1 class="logo"><a href="#"><img src="https://oimg1.kbstar.com/img/ocommon/2015/all_menu_kb_logo.png" alt="KB국민은행" /></a></h1>
+			<iframe id="ifr_menuAll" scrolling="no" src="" title="KB국민은행 전체메뉴" frameborder="0"></iframe>
+			<button class="all_menu_close_btn">닫기</button>
+		</div>
+	</div>
+</div>
+<!-- //전체 메뉴 끝 -->
+
+
+</div>
+		</div>	</div>	    <div class="contentWrap">	        <div id="LP">			<div class="lnbWrap">				
+<div id="b029907">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--EndBusinessLogicRegion-->
+
+
+
+
+
+
+			<!-- lnb 시작 -->
+				<h2 class="lnbTitle">고시환율</h2>
+					
+						
+							<ul id="lnb" class="lnb">
+								<li class="on"><a class="single"href='/quics?page=C015690'>환율조회</a>
+					</li> 
+					<li><a href='/quics?page=C015702'>환가료율조회</a>
+					</li> 
+					
+							</ul>							
+						
+								
+			<!-- lnb 끝 -->
+</div>
+
+<div id="b037510">
+<p><a href="/quics?page=C018872">공인인증센터</a></p>
+</div>
+
+<div id="b059818">
+<!-- 외환 배너 // -->
+<div class="s4">
+	<a href="/quics?page=C055869"><img src="https://oimg1.kbstar.com/img/ocommon/o_banner/bnr_kbpost.jpg" alt="외화환전~ 편하게 배달받자! KB-POST 외화배달서비스" /></a>
+</div>
+<!-- // 외환 배너 -->
+</div>
+			</div>		</div>		        <div id="CP">
+<div id="b030375">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script type="text/javascript">
+			function HelpOpenPopWin(f,actionUrl,Option){
+				window.open("", f.target, Option);
+				f.action = actionUrl;
+				f.submit();
+			}
+		</script>
+		
+		<form name="HelpPopupForm" id="HelpPopupForm" method="post" target="HelpPop" action="">
+			<input type="hidden" name="QSL" value="F" />
+		</form>
+		<!-- Navigation 시작 -->
+	      <h4 class="blind">페이지 위치</h4>
+		<div class="linemap">
+			<a href='/quics?page=ofex'>외환</a> <a href='/quics?page=C015688'>환율</a> <a href='/quics?page=C015689'>고시환율</a> <em>환율조회</em>
+		</div>
+		<!-- Navigation 끝 -->
+</div>
+
+<div id="b030378">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Title 시작 -->
+		<div class="toparea">
+		  <h1 class="h1_title">환율조회</h1>
+		</div>		
+		
+			
+		
+		
+			
+  	
+		
+			
+		 	
+		<!-- Title 끝 -->		
+</div>
+
+<div id="b028286">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+    $().ready(function(){
+        //input text 하나있을경우 엔터키 적용제거
+        $('#CP form').submit(function(){
+            return false;
+        });
+
+        //모바일기기시 인쇄 저장버튼 제거
+        if(caq.util.isPadFlag() || caq.util.isAndroidFlag() || caq.util.isIOSFlag()){
+            $('#CP input[type=button][value=저장]').hide();
+            $('#CP input[type=button][value=인쇄]').hide();
+            $('#CP a:contains(인쇄)').hide();
+            $('#CP a:contains(저장)').hide();
+        }
+    });
+//]]>
+</script>
+
+
+
+
+
+
+<div id="errorDiv"  style="position:relative;z-index:1;display:none;"><div id="errorDivIn" class="notiArea error">  <strong>고객님 죄송합니다.</strong>  <p id="errMsg" class="comment"></p>  <input type="hidden" name="errorCode"        id="errorCode"        value=""/>  <input type="hidden" name="pageNm"        id="pageNm"        value="환율조회"/>  <input type="hidden" name="pageCd"        id="pageCd"        value="C015690"/>  <p id="linkText" class="comment"> </p>  <p id="errorTransfer" style="display:none;"><strong id="goPage"></strong> 화면으로 이동합니다.</p>  <ul class="list_type1" id="errUl">    <li>응답코드 <span class="point_blue" id="errCd">()</span></li>  </ul>  <div class="notiCall">    <span class="btn small errClose" id="errorClose" style="display:none;"><a href="javascript:window.close();">닫기</a></span>    대표전화&nbsp;&nbsp;&nbsp;<em>1588-9999</em><span>|</span><em>1599-9999</em><span>|</span><em>1644-9999</em>  </div></div><div class="btnArea" id="errorTransferBtn" style="display:none;">  <span class="btn large action"><a href="">확인</a></span></div><script type="text/javascript">	//<![CDATA[  $(function(){    if($.browser.msie){      var tempObj    = $("#errorTransferBtn").find("a");      var strTempUrl = tempObj.attr("href");      tempObj.attr("href", caq.util.getEncodeURI(strTempUrl));    }  });  //]]></script></div>
+
+
+
+<form id="IBF" name="IBF" action="" >
+<input type="hidden" name="조회년월일"/>
+<input type="hidden" name="등록회차"/>
+<input type="hidden" name="monyCd"/>
+<input type="hidden" name="selDate" value="20181203" />
+<input type="hidden" name="strFocusBtn" id="strFocusBtn" />
+							
+
+<div class="box_type1">
+	<ul class="list_type1">
+		<li><span class="point_orange">인터넷 홈페이지를 통해 고시되는 환율</span>은 <span class="point_orange">미달러화 기준 1만불 미만</span> (단, USD, EUR, JPY, GBP, CAD, NZD, AUD, CNY, CHF, HKD, SGD, AED, THB를 제외한 기타통화는 미달러화 기준 5만불 미만) 거래시 적용되는 환율입니다.</li>
+		<li><span class="point_orange">미달러화 기준 1만불 이상</span> (단, USD, EUR, JPY, GBP, CAD, NZD, AUD, CNY, CHF, HKD, SGD, AED, THB를 제외한 기타통화는 미달러화 기준 5만불 이상) 거래시 적용되는 환율(시장연동매매율)의 경우에는 <span class="point_orange">가까운 영업점에 문의</span>하시기 바랍니다.</li>
+		<li>중국 위안화 환율(CNY)은 홍콩 시장에서 거래되는 위안화 환율(CNH)을 고시합니다.</li>
+	</ul>
+</div>
+
+
+	
+
+<table class="tType02" summary="일자별로 검색하실 수 있습니다.">
+	<caption>일자별 검색</caption>
+	<colgroup>
+		<col width="19%"/><col width="auto"/>
+	</colgroup>
+	<tbody>
+		<tr class="first">
+			<th scope="row"><label for="year1">일자별 검색</label></th>
+			<td>
+				
+            	<span id="minical-top">
+	<span id="div_year1"><input type="text" id="year1" name="year1" value="2018" class="input" style="width:30px; ime-mode:disabled;" maxlength="4"/></span><span class="tx_space">&nbsp;년</span>
+	<script type="text/javascript">
+	  //<![CDATA[
+	  caq.tag.setYearSelBoxTitle("year1", '', "2015", "2019", "2018", "mon1", "day1", "03","");
+	  //]]>
+	</script>
+	<span id="div_mon1"><input type="text" id="mon1" name="mon1" value="12" class="input" style="width:15px; ime-mode:disabled;" maxlength="2"/></span><span class="tx_space">&nbsp;월</span>
+	<script type="text/javascript">
+	  //<![CDATA[
+	  caq.tag.setMonthSelBoxTitle("year1", '', "mon1", "day1", "12", "03","");
+	  //]]>
+	</script>
+	<span id="div_day1"><input type="text" id="day1" name="day1" value="03" class="input" style="width:15px; ime-mode:disabled;" maxlength="2"/></span><span class="tx_space">&nbsp;일</span>
+	<script type="text/javascript">
+	  //<![CDATA[
+	  caq.tag.setDateSelBoxTitle('year1', '', 'mon1', 'day1', "03","");
+	  //]]>
+	</script>
+	<a href="javascript:void(0);" onclick="caq.tag.toggleCalendar('KOR','minical', 'year1','mon1', 'day1' ); return false;"><img src="https://oimg1.kbstar.com/btn/btn_calendar.gif" id="minical-btn" class="middle" alt=" 달력으로 선택" /></a>
+	<span id="minical" class="_POPUP_LAYER layerType calendarLayer" style="display:none; top:26px; z-index:9999;"></span>
+</span>
+				
+				
+				<select title="회차 선택" class="selbox" id="se_inqueryRound" name="se_inqueryRound">
+					<option value="117" selected="selected">117회차 17:56:32</option>
+<option value="116"> 116회차 17:55:21</option>
+<option value="115"> 115회차 17:36:01</option>
+<option value="114"> 114회차 17:01:05</option>
+<option value="113"> 113회차 16:26:54</option>
+<option value="112"> 112회차 16:26:22</option>
+<option value="111"> 111회차 16:13:00</option>
+<option value="110"> 110회차 16:11:33</option>
+<option value="109"> 109회차 16:01:52</option>
+<option value="108"> 108회차 16:00:59</option>
+<option value="107"> 107회차 15:54:15</option>
+<option value="106"> 106회차 15:49:28</option>
+<option value="105"> 105회차 15:44:57</option>
+<option value="104"> 104회차 15:44:13</option>
+<option value="103"> 103회차 15:36:26</option>
+<option value="102"> 102회차 15:33:29</option>
+<option value="101"> 101회차 15:31:20</option>
+<option value="100"> 100회차 15:30:30</option>
+<option value="99"> 99회차 15:26:00</option>
+<option value="98"> 98회차 15:25:45</option>
+<option value="97"> 97회차 15:11:09</option>
+<option value="96"> 96회차 15:09:22</option>
+<option value="95"> 95회차 15:06:35</option>
+<option value="94"> 94회차 14:55:38</option>
+<option value="93"> 93회차 14:55:19</option>
+<option value="92"> 92회차 14:52:14</option>
+<option value="91"> 91회차 14:47:32</option>
+<option value="90"> 90회차 14:47:20</option>
+<option value="89"> 89회차 14:45:21</option>
+<option value="88"> 88회차 14:43:41</option>
+<option value="87"> 87회차 14:43:25</option>
+<option value="86"> 86회차 14:41:09</option>
+<option value="85"> 85회차 14:29:58</option>
+<option value="84"> 84회차 14:29:46</option>
+<option value="83"> 83회차 14:24:42</option>
+<option value="82"> 82회차 14:18:48</option>
+<option value="81"> 81회차 14:04:44</option>
+<option value="80"> 80회차 14:00:17</option>
+<option value="79"> 79회차 13:57:21</option>
+<option value="78"> 78회차 13:54:40</option>
+<option value="77"> 77회차 13:51:22</option>
+<option value="76"> 76회차 13:51:09</option>
+<option value="75"> 75회차 13:49:08</option>
+<option value="74"> 74회차 13:48:37</option>
+<option value="73"> 73회차 13:22:03</option>
+<option value="72"> 72회차 13:15:47</option>
+<option value="71"> 71회차 13:14:01</option>
+<option value="70"> 70회차 13:12:04</option>
+<option value="69"> 69회차 13:06:04</option>
+<option value="68"> 68회차 13:04:53</option>
+<option value="67"> 67회차 13:03:36</option>
+<option value="66"> 66회차 12:58:45</option>
+<option value="65"> 65회차 12:56:11</option>
+<option value="64"> 64회차 12:45:00</option>
+<option value="63"> 63회차 12:44:47</option>
+<option value="62"> 62회차 12:41:22</option>
+<option value="61"> 61회차 12:41:13</option>
+<option value="60"> 60회차 12:34:23</option>
+<option value="59"> 59회차 12:34:11</option>
+<option value="58"> 58회차 12:20:40</option>
+<option value="57"> 57회차 12:20:31</option>
+<option value="56"> 56회차 12:16:51</option>
+<option value="55"> 55회차 11:58:39</option>
+<option value="54"> 54회차 11:58:27</option>
+<option value="53"> 53회차 11:57:38</option>
+<option value="52"> 52회차 11:51:44</option>
+<option value="51"> 51회차 11:50:16</option>
+<option value="50"> 50회차 11:42:38</option>
+<option value="49"> 49회차 11:39:41</option>
+<option value="48"> 48회차 11:39:29</option>
+<option value="47"> 47회차 11:34:54</option>
+<option value="46"> 46회차 11:34:40</option>
+<option value="45"> 45회차 11:28:54</option>
+<option value="44"> 44회차 11:25:39</option>
+<option value="43"> 43회차 11:16:13</option>
+<option value="42"> 42회차 11:11:00</option>
+<option value="41"> 41회차 10:57:50</option>
+<option value="40"> 40회차 10:57:03</option>
+<option value="39"> 39회차 10:41:34</option>
+<option value="38"> 38회차 10:23:14</option>
+<option value="37"> 37회차 10:19:27</option>
+<option value="36"> 36회차 10:16:54</option>
+<option value="35"> 35회차 10:14:04</option>
+<option value="34"> 34회차 10:13:47</option>
+<option value="33"> 33회차 10:13:31</option>
+<option value="32"> 32회차 10:06:44</option>
+<option value="31"> 31회차 10:06:37</option>
+<option value="30"> 30회차 10:06:33</option>
+<option value="29"> 29회차 10:06:29</option>
+<option value="28"> 28회차 10:06:25</option>
+<option value="27"> 27회차 10:03:59</option>
+<option value="26"> 26회차 09:55:20</option>
+<option value="25"> 25회차 09:52:36</option>
+<option value="24"> 24회차 09:52:22</option>
+<option value="23"> 23회차 09:47:54</option>
+<option value="22"> 22회차 09:45:07</option>
+<option value="21"> 21회차 09:45:01</option>
+<option value="20"> 20회차 09:44:51</option>
+<option value="19"> 19회차 09:39:06</option>
+<option value="18"> 18회차 09:35:26</option>
+<option value="17"> 17회차 09:34:17</option>
+<option value="16"> 16회차 09:30:38</option>
+<option value="15"> 15회차 09:28:42</option>
+<option value="14"> 14회차 09:28:28</option>
+<option value="13"> 13회차 09:24:25</option>
+<option value="12"> 12회차 09:09:46</option>
+<option value="11"> 11회차 09:09:39</option>
+<option value="10"> 10회차 09:09:19</option>
+<option value="9"> 9회차 09:09:12</option>
+<option value="8"> 8회차 09:03:06</option>
+<option value="7"> 7회차 09:02:23</option>
+<option value="6"> 6회차 09:01:16</option>
+<option value="5"> 5회차 09:01:08</option>
+<option value="4"> 4회차 09:00:54</option>
+<option value="3"> 3회차 09:00:37</option>
+<option value="2"> 2회차 08:39:23</option>
+<option value="1"> 1회차 08:32:45</option>
+
+				</select><span class="txt_term">회차</span>
+					
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div class="btnArea">
+	<span class="btn large action"><input type="button" name="조회" id="조회" value="조회" onclick="javascript:uf_setFocusBtn(this); return false;" /></span>
+</div>
+
+
+
+<div class="hitday_area s7">
+	<span class="hitday">조회기준고시회차 :&nbsp;2018.12.03 117  회차&nbsp;&nbsp;적용시각 : 17:56:32</span>
+</div>
+
+<div class="btnTable">
+	<div class="inq_btn_area">
+		<div class="fl">
+			<span class="btn small icon"><span class="left prev"><input type="button" value="전일" id="전일1" onclick='javascript:uf_setFocusBtn(this); uf_yesterday("2018.12.03"); return false;'/></span></span>
+			<span class="btn small icon"><span class="left next"><input type="button" value="다음일" id="익일1" onclick='javascript:uf_setFocusBtn(this); uf_tomorrow("2018.12.03"); uf_setFocusBtn(this); return false;'/></span></span>
+		</div>
+		<div class="fr">
+		
+    
+			<span class="btn small icon"><span class="left excel"><input type="button"  name="저장" value="저장" /></span></span>
+			<span class="btn small icon"><span class="right blank"><input title="새창 열림" type="button" name="인쇄" value="인쇄" /></span></span>
+	
+        </div>
+	</div>
+    <div id="showTable">
+        <table class="tType01" summary="이 표는 일자별 검색 결과 정보를 제공하며, 통화명, 매매기준율, 송금전신환, 보내실때, 받으실때, 현찰, 사실때, 파실때, 여행자수표 사실때, 대미 환산율, 외화수표 파실때 로 구성되어 있습니다.">
+            <caption>일자별 검색 결과</caption>
+            <colgroup>
+                <col width="auto" /><col width="8%" /><col width="9%" /><col width="9%" /><col width="8%" /><col width="8%" /><col width="6%" /><col width="6%" /><col width="8%" /><col width="7%" /><col width="8%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" rowspan="3">통화(통화명)</th>
+                    <th scope="col" rowspan="3">매매<br />기준율</th>
+                    <th scope="col" colspan="2">송금(전신환)</th>
+                    <th scope="col" colspan="4">현찰</th>
+                    <th scope="col" rowspan="3">여행자<br />수표(T/C)<br />사실 때</th>
+                    <th scope="col" rowspan="3">미화<br />환산율</th>
+                    <th scope="col" rowspan="3" class="nbr">외화수표<br />파실 때</th>
+                </tr>
+                <tr>
+                    <th scope="col" rowspan="2">보내실 때</th>
+                    <th scope="col" rowspan="2">받으실 때</th>
+                    <th scope="col" rowspan="2">사실 때</th>
+                    <th scope="col" rowspan="2">파실 때</th>
+                    <th scope="col" colspan="2">스프레드(%)</th>
+                </tr>
+                <tr>
+                	  <th scope="col">사실때</th>
+                    <th scope="col">파실때</th>
+                </tr>
+            </thead>
+            
+            
+            
+            <tbody id="AllDsp1">
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('USD'); return false;">
+                                            USD<span style="font-size:11px;">(미국 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">1,111.00</td>
+                                  <td class="tRight">1,121.70</td>
+                                  <td class="tRight">1,100.30</td>
+                                  <td class="tRight">1,130.44</td>
+                                  <td class="tRight">1,091.56</td>
+                                  <td class="tRight">1.75</td>
+                                  <td class="tRight">1.75</td>	
+                                  <td class="tRight">1,124.33</td>
+                                  <td class="tRight">1.0000   </td>
+                                  <td class="nbr tRight">1,100.30	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('JPY'); return false;">
+                                            JPY<span style="font-size:11px;">(일본 100 엔)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">979.98</td>
+                                  <td class="tRight">989.48</td>
+                                  <td class="tRight">970.48</td>
+                                  <td class="tRight">997.12</td>
+                                  <td class="tRight">962.84</td>
+                                  <td class="tRight">1.75</td>
+                                  <td class="tRight">1.75</td>	
+                                  <td class="tRight">991.73</td>
+                                  <td class="tRight">0.8821   </td>
+                                  <td class="nbr tRight">970.48	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('EUR'); return false;">
+                                            EUR<span style="font-size:11px;">(유럽연합 유로)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">1,262.98</td>
+                                  <td class="tRight">1,275.60</td>
+                                  <td class="tRight">1,250.36</td>
+                                  <td class="tRight">1,287.98</td>
+                                  <td class="tRight">1,237.98</td>
+                                  <td class="tRight">1.98</td>
+                                  <td class="tRight">1.98</td>	
+                                  <td class="tRight">1,278.13</td>
+                                  <td class="tRight">1.1368   </td>
+                                  <td class="nbr tRight">1,250.36	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('GBP'); return false;">
+                                            GBP<span style="font-size:11px;">(영국 파운드)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">1,422.41</td>
+                                  <td class="tRight">1,436.63</td>
+                                  <td class="tRight">1,408.19</td>
+                                  <td class="tRight">1,450.71</td>
+                                  <td class="tRight">1,394.11</td>
+                                  <td class="tRight">1.99</td>
+                                  <td class="tRight">1.99</td>	
+                                  <td class="tRight">1,439.47</td>
+                                  <td class="tRight">1.2803   </td>
+                                  <td class="nbr tRight">1,408.19	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('CHF'); return false;">
+                                            CHF<span style="font-size:11px;">(스위스 프랑)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">1,114.23</td>
+                                  <td class="tRight">1,125.37</td>
+                                  <td class="tRight">1,103.09</td>
+                                  <td class="tRight">1,136.40</td>
+                                  <td class="tRight">1,092.06</td>
+                                  <td class="tRight">1.99</td>
+                                  <td class="tRight">1.99</td>	
+                                  <td class="tRight">1,127.60</td>
+                                  <td class="tRight">1.0029   </td>
+                                  <td class="nbr tRight">1,103.09	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('CAD'); return false;">
+                                            CAD<span style="font-size:11px;">(캐나다 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">844.03</td>
+                                  <td class="tRight">852.47</td>
+                                  <td class="tRight">835.59</td>
+                                  <td class="tRight">860.82</td>
+                                  <td class="tRight">827.24</td>
+                                  <td class="tRight">1.99</td>
+                                  <td class="tRight">1.99</td>	
+                                  <td class="tRight">854.15</td>
+                                  <td class="tRight">0.7597   </td>
+                                  <td class="nbr tRight">835.59	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('AUD'); return false;">
+                                            AUD<span style="font-size:11px;">(오스트레일리아 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">821.25</td>
+                                  <td class="tRight">829.46</td>
+                                  <td class="tRight">813.04</td>
+                                  <td class="tRight">837.59</td>
+                                  <td class="tRight">804.91</td>
+                                  <td class="tRight">1.99</td>
+                                  <td class="tRight">1.99</td>	
+                                  <td class="tRight">831.10</td>
+                                  <td class="tRight">0.7392   </td>
+                                  <td class="nbr tRight">813.04	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('NZD'); return false;">
+                                            NZD<span style="font-size:11px;">(뉴질랜드 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">769.92</td>
+                                  <td class="tRight">777.61</td>
+                                  <td class="tRight">762.23</td>
+                                  <td class="tRight">785.24</td>
+                                  <td class="tRight">754.60</td>
+                                  <td class="tRight">1.99</td>
+                                  <td class="tRight">1.99</td>	
+                                  <td class="tRight">779.15</td>
+                                  <td class="tRight">0.6930   </td>
+                                  <td class="nbr tRight">762.23	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('HKD'); return false;">
+                                            HKD<span style="font-size:11px;">(홍콩 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">142.05</td>
+                                  <td class="tRight">143.47</td>
+                                  <td class="tRight">140.63</td>
+                                  <td class="tRight">144.87</td>
+                                  <td class="tRight">139.23</td>
+                                  <td class="tRight">1.99</td>
+                                  <td class="tRight">1.99</td>	
+                                  <td class="tRight">143.75</td>
+                                  <td class="tRight">0.1279   </td>
+                                  <td class="nbr tRight">140.63	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('CNY'); return false;">
+                                            CNY<span style="font-size:11px;">(중국 위안)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">161.44</td>
+                                  <td class="tRight">163.05</td>
+                                  <td class="tRight">159.83</td>
+                                  <td class="tRight">171.12</td>
+                                  <td class="tRight">153.37</td>
+                                  <td class="tRight">6.00</td>
+                                  <td class="tRight">5.00</td>	
+                                  <td class="tRight">171.12</td>
+                                  <td class="tRight">0.1453   </td>
+                                  <td class="nbr tRight">159.83	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('SEK'); return false;">
+                                            SEK<span style="font-size:11px;">(스웨덴 크로네)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">122.87</td>
+                                  <td class="tRight">124.09</td>
+                                  <td class="tRight">121.65</td>
+                                  <td class="tRight">125.94</td>
+                                  <td class="tRight">119.80</td>
+                                  <td class="tRight">2.50</td>
+                                  <td class="tRight">2.50</td>	
+                                  <td class="tRight">124.34</td>
+                                  <td class="tRight">0.1106   </td>
+                                  <td class="nbr tRight">121.65	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('DKK'); return false;">
+                                            DKK<span style="font-size:11px;">(덴마크 크로네)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">169.25</td>
+                                  <td class="tRight">170.94</td>
+                                  <td class="tRight">167.56</td>
+                                  <td class="tRight">173.48</td>
+                                  <td class="tRight">165.02</td>
+                                  <td class="tRight">2.50</td>
+                                  <td class="tRight">2.50</td>	
+                                  <td class="tRight">171.28</td>
+                                  <td class="tRight">0.1523   </td>
+                                  <td class="nbr tRight">167.56	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('NOK'); return false;">
+                                            NOK<span style="font-size:11px;">(노르웨이 크로네)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">130.33</td>
+                                  <td class="tRight">131.63</td>
+                                  <td class="tRight">129.03</td>
+                                  <td class="tRight">133.58</td>
+                                  <td class="tRight">127.08</td>
+                                  <td class="tRight">2.50</td>
+                                  <td class="tRight">2.50</td>	
+                                  <td class="tRight">131.89</td>
+                                  <td class="tRight">0.1173   </td>
+                                  <td class="nbr tRight">129.03	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('SAR'); return false;">
+                                            SAR<span style="font-size:11px;">(사우디아라비아 리얄)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">296.11</td>
+                                  <td class="tRight">299.07</td>
+                                  <td class="tRight">293.15</td>
+                                  <td class="tRight">310.91</td>
+                                  <td class="tRight">275.39</td>
+                                  <td class="tRight">5.00</td>
+                                  <td class="tRight">7.00</td>	
+                                  <td class="tRight">299.66</td>
+                                  <td class="tRight">0.2665   </td>
+                                  <td class="nbr tRight">293.15	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('KWD'); return false;">
+                                            KWD<span style="font-size:11px;">(쿠웨이트 디나르)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">3,652.20</td>
+                                  <td class="tRight">3,688.72</td>
+                                  <td class="tRight">3,615.68</td>
+                                  <td class="tRight">3,871.33</td>
+                                  <td class="tRight">3,360.03</td>
+                                  <td class="tRight">6.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">3,696.02</td>
+                                  <td class="tRight">3.2873   </td>
+                                  <td class="nbr tRight">3,615.68	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('BHD'); return false;">
+                                            BHD<span style="font-size:11px;">(바레인 디나르)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">2,947.73</td>
+                                  <td class="tRight">2,977.20</td>
+                                  <td class="tRight">2,918.26</td>
+                                  <td class="tRight">3,124.59</td>
+                                  <td class="tRight">2,711.92</td>
+                                  <td class="tRight">6.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">2,983.10</td>
+                                  <td class="tRight">2.6532   </td>
+                                  <td class="nbr tRight">2,918.26	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('AED'); return false;">
+                                            AED<span style="font-size:11px;">(아랍에미리트 디르함)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">302.47</td>
+                                  <td class="tRight">305.49</td>
+                                  <td class="tRight">299.45</td>
+                                  <td class="tRight">317.59</td>
+                                  <td class="tRight">281.30</td>
+                                  <td class="tRight">5.00</td>
+                                  <td class="tRight">7.00</td>	
+                                  <td class="tRight">306.09</td>
+                                  <td class="tRight">0.2723   </td>
+                                  <td class="nbr tRight">299.45	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('THB'); return false;">
+                                            THB<span style="font-size:11px;">(태국 바트)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">33.91</td>
+                                  <td class="tRight">34.24</td>
+                                  <td class="tRight">33.58</td>
+                                  <td class="tRight">35.93</td>
+                                  <td class="tRight">31.54</td>
+                                  <td class="tRight">5.96</td>
+                                  <td class="tRight">7.00</td>	
+                                  <td class="tRight">34.31</td>
+                                  <td class="tRight">0.0305   </td>
+                                  <td class="nbr tRight">33.58	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('SGD'); return false;">
+                                            SGD<span style="font-size:11px;">(싱가포르 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">813.32</td>
+                                  <td class="tRight">821.45</td>
+                                  <td class="tRight">805.19</td>
+                                  <td class="tRight">829.58</td>
+                                  <td class="tRight">797.06</td>
+                                  <td class="tRight">2.00</td>
+                                  <td class="tRight">2.00</td>	
+                                  <td class="tRight">823.07</td>
+                                  <td class="tRight">0.7321   </td>
+                                  <td class="nbr tRight">805.19	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('IDR'); return false;">
+                                            IDR<span style="font-size:11px;">(인도네시아 100 루피아)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">7.81</td>
+                                  <td class="tRight">7.88</td>
+                                  <td class="tRight">7.74</td>
+                                  <td class="tRight">8.43</td>
+                                  <td class="tRight">6.96</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">11.00</td>	
+                                  <td class="tRight">7.90</td>
+                                  <td class="tRight">0.0070   </td>
+                                  <td class="nbr tRight">7.74	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('ZAR'); return false;">
+                                            ZAR<span style="font-size:11px;">(남아프리카공화국 랜드)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">81.52</td>
+                                  <td class="tRight">81.52</td>
+                                  <td class="tRight">81.52</td>
+                                  <td class="tRight">88.04</td>
+                                  <td class="tRight">75.00</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">81.52</td>
+                                  <td class="tRight">0.0734   </td>
+                                  <td class="nbr tRight">81.52	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('RUB'); return false;">
+                                            RUB<span style="font-size:11px;">(러시아 루블)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">16.71</td>
+                                  <td class="tRight">16.87</td>
+                                  <td class="tRight">16.55</td>
+                                  <td class="tRight">18.04</td>
+                                  <td class="tRight">14.71</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">12.00</td>	
+                                  <td class="tRight">16.71</td>
+                                  <td class="tRight">0.0150   </td>
+                                  <td class="nbr tRight">16.55	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('HUF'); return false;">
+                                            HUF<span style="font-size:11px;">(헝가리 포린트)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">3.92</td>
+                                  <td class="tRight">3.92</td>
+                                  <td class="tRight">3.92</td>
+                                  <td class="tRight">4.23</td>
+                                  <td class="tRight">3.61</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">3.92</td>
+                                  <td class="tRight">0.0035   </td>
+                                  <td class="nbr tRight">3.92	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('PLN'); return false;">
+                                            PLN<span style="font-size:11px;">(폴란드 즐로티)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">295.09</td>
+                                  <td class="tRight">298.04</td>
+                                  <td class="tRight">292.14</td>
+                                  <td class="tRight">318.69</td>
+                                  <td class="tRight">274.44</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">7.00</td>	
+                                  <td class="tRight">295.09</td>
+                                  <td class="tRight">0.2656   </td>
+                                  <td class="nbr tRight">292.14	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('INR'); return false;">
+                                            INR<span style="font-size:11px;">(인도 루피)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">15.87</td>
+                                  <td class="tRight">15.87</td>
+                                  <td class="tRight">15.87</td>
+                                  <td class="tRight">17.29</td>
+                                  <td class="tRight">14.45</td>
+                                  <td class="tRight">9.00</td>
+                                  <td class="tRight">9.00</td>	
+                                  <td class="tRight">15.87</td>
+                                  <td class="tRight">0.0143   </td>
+                                  <td class="nbr tRight">15.87	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('MYR'); return false;">
+                                            MYR<span style="font-size:11px;">(말레이시아 링깃)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">266.30</td>
+                                  <td class="tRight">268.96</td>
+                                  <td class="tRight">263.64</td>
+                                  <td class="tRight">282.27</td>
+                                  <td class="tRight">245.00</td>
+                                  <td class="tRight">6.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">269.49</td>
+                                  <td class="tRight">0.2397   </td>
+                                  <td class="nbr tRight">263.64	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('PKR'); return false;">
+                                            PKR<span style="font-size:11px;">(파키스탄 루피)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">7.99</td>
+                                  <td class="tRight">7.99</td>
+                                  <td class="tRight">7.99</td>
+                                  <td class="tRight">8.62</td>
+                                  <td class="tRight">7.36</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">7.99</td>
+                                  <td class="tRight">0.0072   </td>
+                                  <td class="nbr tRight">7.99	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('BDT'); return false;">
+                                            BDT<span style="font-size:11px;">(방글라데시 타카)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">13.24</td>
+                                  <td class="tRight">13.24</td>
+                                  <td class="tRight">13.24</td>
+                                  <td class="tRight">14.29</td>
+                                  <td class="tRight">12.19</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">13.24</td>
+                                  <td class="tRight">0.0119   </td>
+                                  <td class="nbr tRight">13.24	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('PHP'); return false;">
+                                            PHP<span style="font-size:11px;">(필리핀 페소)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">21.22</td>
+                                  <td class="tRight">21.43</td>
+                                  <td class="tRight">21.01</td>
+                                  <td class="tRight">23.34</td>
+                                  <td class="tRight">19.74</td>
+                                  <td class="tRight">10.00</td>
+                                  <td class="tRight">7.00</td>	
+                                  <td class="tRight">21.22</td>
+                                  <td class="tRight">0.0191   </td>
+                                  <td class="nbr tRight">21.01	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('EGP'); return false;">
+                                            EGP<span style="font-size:11px;">(이집트 파운드)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">62.01</td>
+                                  <td class="tRight">62.01</td>
+                                  <td class="tRight">62.01</td>
+                                  <td class="tRight">66.97</td>
+                                  <td class="tRight">57.67</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">7.00</td>	
+                                  <td class="tRight">62.01</td>
+                                  <td class="tRight">0.0558   </td>
+                                  <td class="nbr tRight">62.01	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('MXN'); return false;">
+                                            MXN<span style="font-size:11px;">(멕시코 페소)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">55.50</td>
+                                  <td class="tRight">55.50</td>
+                                  <td class="tRight">55.50</td>
+                                  <td class="tRight">59.94</td>
+                                  <td class="tRight">51.06</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">55.50</td>
+                                  <td class="tRight">0.0500   </td>
+                                  <td class="nbr tRight">55.50	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('BRL'); return false;">
+                                            BRL<span style="font-size:11px;">(브라질 리얄)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">287.31</td>
+                                  <td class="tRight">287.31</td>
+                                  <td class="tRight">287.31</td>
+                                  <td class="tRight">310.29</td>
+                                  <td class="tRight">264.33</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">287.31</td>
+                                  <td class="tRight">0.2586   </td>
+                                  <td class="nbr tRight">287.31	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('BND'); return false;">
+                                            BND<span style="font-size:11px;">(브루나이 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">811.36</td>
+                                  <td class="tRight">811.36</td>
+                                  <td class="tRight">811.36</td>
+                                  <td class="tRight">843.81</td>
+                                  <td class="tRight">762.68</td>
+                                  <td class="tRight">4.00</td>
+                                  <td class="tRight">6.00</td>	
+                                  <td class="tRight">811.36</td>
+                                  <td class="tRight">0.7303   </td>
+                                  <td class="nbr tRight">811.36	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('TWD'); return false;">
+                                            TWD<span style="font-size:11px;">(타이완 달러)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">36.14</td>
+                                  <td class="tRight">36.14</td>
+                                  <td class="tRight">36.14</td>
+                                  <td class="tRight">39.03</td>
+                                  <td class="tRight">33.62</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">7.00</td>	
+                                  <td class="tRight">36.14</td>
+                                  <td class="tRight">0.0325   </td>
+                                  <td class="nbr tRight">36.14	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('ILS'); return false;">
+                                            ILS<span style="font-size:11px;">(이스라엘 세켈)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">299.00</td>
+                                  <td class="tRight">299.00</td>
+                                  <td class="tRight">299.00</td>
+                                  <td class="tRight">322.92</td>
+                                  <td class="tRight">275.08</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">299.00</td>
+                                  <td class="tRight">0.2691   </td>
+                                  <td class="nbr tRight">299.00	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('JOD'); return false;">
+                                            JOD<span style="font-size:11px;">(요르단 디나르)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">1,565.89</td>
+                                  <td class="tRight">1,565.89</td>
+                                  <td class="tRight">1,565.89</td>
+                                  <td class="tRight">1,628.52</td>
+                                  <td class="tRight">1,440.62</td>
+                                  <td class="tRight">4.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">1,565.89</td>
+                                  <td class="tRight">1.4094   </td>
+                                  <td class="nbr tRight">1,565.89	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('VND'); return false;">
+                                            VND<span style="font-size:11px;">(베트남 100 동)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">4.77</td>
+                                  <td class="tRight">4.77</td>
+                                  <td class="tRight">4.77</td>
+                                  <td class="tRight">5.34</td>
+                                  <td class="tRight">4.20</td>
+                                  <td class="tRight">12.00</td>
+                                  <td class="tRight">12.00</td>	
+                                  <td class="tRight">4.77</td>
+                                  <td class="tRight">0.0043   </td>
+                                  <td class="nbr tRight">4.77	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('KZT'); return false;">
+                                            KZT<span style="font-size:11px;">(카자흐스탄 텡게)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">2.98</td>
+                                  <td class="tRight">3.00</td>
+                                  <td class="tRight">2.96</td>
+                                  <td class="tRight">3.33</td>
+                                  <td class="tRight">2.63</td>
+                                  <td class="tRight">12.00</td>
+                                  <td class="tRight">12.00</td>	
+                                  <td class="tRight">2.98</td>
+                                  <td class="tRight">0.0027   </td>
+                                  <td class="nbr tRight">2.96	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('TRY'); return false;">
+                                            TRY<span style="font-size:11px;">(터키 리라)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">214.23</td>
+                                  <td class="tRight">216.37</td>
+                                  <td class="tRight">212.09</td>
+                                  <td class="tRight">231.36</td>
+                                  <td class="tRight">197.10</td>
+                                  <td class="tRight">8.00</td>
+                                  <td class="tRight">8.00</td>	
+                                  <td class="tRight">214.23</td>
+                                  <td class="tRight">0.1928   </td>
+                                  <td class="nbr tRight">212.09	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                         <a href="javascript:" onclick="javascript:uf_goLink('CZK'); return false;">
+                                            CZK<span style="font-size:11px;">(체코 코루나)</span>
+                                         </a>
+                                    
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">48.48</td>
+                                  <td class="tRight">48.96</td>
+                                  <td class="tRight">48.00</td>
+                                  <td class="tRight">51.87</td>
+                                  <td class="tRight">44.12</td>
+                                  <td class="tRight">7.00</td>
+                                  <td class="tRight">9.00</td>	
+                                  <td class="tRight">48.48</td>
+                                  <td class="tRight">0.0436   </td>
+                                  <td class="nbr tRight">48.00	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                    
+                                        MNT<span style="font-size:11px;">(몽골 터그럭)</span>
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">0.42</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>	
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">0.0004   </td>
+                                  <td class="nbr tRight">-	</td>
+                             </tr>
+                    
+                    	
+                	
+                     
+                              <tr>
+                                  <td scope="row">
+                                  
+                                    
+                                    
+                                        QAR<span style="font-size:11px;">(카타르 리알)</span>
+                                    
+                                  
+                                  </td>
+                                  <td class="tRight">305.12</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">-</td>	
+                                  <td class="tRight">-</td>
+                                  <td class="tRight">0.2746   </td>
+                                  <td class="nbr tRight">-	</td>
+                             </tr>
+                    
+                    	
+                
+            </tbody>
+            
+        </table>
+    </div>
+    	  
+    <div id="targetTable" style="display:none">
+        <div class="hitday_area">
+            <span class="hitday">조회기준고시회차 :&nbsp;2018.12.03 117  회차&nbsp;&nbsp;적용시각 : 17:56:32</span>
+        </div>	
+        <table class="tType01" summary="이 표는 일자별 검색 결과 정보를 제공하며, 통화명, 매매기준율, 송금전신환, 보내실때, 받으실때, 현찰, 사실때, 파실때, 여행자수표 사실때, 대미 환산율, 외화수표 파실때 로 구성되어 있습니다.">
+            <caption>일자별 검색 결과</caption>
+            <colgroup>
+                <col width="auto" /><col width="8%" /><col width="9%" /><col width="9%" /><col width="8%" /><col width="8%" /><col width="6%" /><col width="6%" /><col width="8%" /><col width="7%" /><col width="8%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" rowspan="3">통화(통화명)</th>
+                    <th scope="col" rowspan="3">매매<br />기준율</th>
+                    <th scope="col" colspan="2">송금(전신환)</th>
+                    <th scope="col" colspan="4">현찰</th>
+                    <th scope="col" rowspan="3">여행자<br />수표(T/C)<br />사실 때</th>
+                    <th scope="col" rowspan="3">미화<br />환산율</th>
+                    <th scope="col" rowspan="3" class="nbr">외화수표<br />파실 때</th>
+                </tr>
+                <tr>
+                    <th scope="col" rowspan="2">보내실 때</th>
+                    <th scope="col" rowspan="2">받으실 때</th>
+                    <th scope="col" rowspan="2">사실 때</th>
+                    <th scope="col" rowspan="2">파실 때</th>
+                    <th scope="col" colspan="2">스프레드(%)</th>
+                </tr>
+                <tr>
+                	  <th scope="col">사실때</th>
+                    <th scope="col">파실때</th>
+                </tr>
+            </thead>
+                    		
+        		
+        		<tbody id="AllDsp2">
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('USD'); return false;">
+                                        USD<span style="font-size:11px;">(미국 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">1,111.00		</td>
+                          <td class="tRight">1,121.70		</td>
+                          <td class="tRight">1,100.30		</td>
+                          <td class="tRight">1,130.44		</td>
+                          <td class="tRight">1,091.56		</td>
+                          <td class="tRight">1.75</td>
+                          <td class="tRight">1.75</td>	
+                          <td class="tRight">1,124.33		</td>
+                          <td class="tRight">1.0000   		</td>
+                          <td class="nbr tRight">1,100.30	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('JPY'); return false;">
+                                        JPY<span style="font-size:11px;">(일본 100 엔)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">979.98		</td>
+                          <td class="tRight">989.48		</td>
+                          <td class="tRight">970.48		</td>
+                          <td class="tRight">997.12		</td>
+                          <td class="tRight">962.84		</td>
+                          <td class="tRight">1.75</td>
+                          <td class="tRight">1.75</td>	
+                          <td class="tRight">991.73		</td>
+                          <td class="tRight">0.8821   		</td>
+                          <td class="nbr tRight">970.48	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('EUR'); return false;">
+                                        EUR<span style="font-size:11px;">(유럽연합 유로)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">1,262.98		</td>
+                          <td class="tRight">1,275.60		</td>
+                          <td class="tRight">1,250.36		</td>
+                          <td class="tRight">1,287.98		</td>
+                          <td class="tRight">1,237.98		</td>
+                          <td class="tRight">1.98</td>
+                          <td class="tRight">1.98</td>	
+                          <td class="tRight">1,278.13		</td>
+                          <td class="tRight">1.1368   		</td>
+                          <td class="nbr tRight">1,250.36	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('GBP'); return false;">
+                                        GBP<span style="font-size:11px;">(영국 파운드)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">1,422.41		</td>
+                          <td class="tRight">1,436.63		</td>
+                          <td class="tRight">1,408.19		</td>
+                          <td class="tRight">1,450.71		</td>
+                          <td class="tRight">1,394.11		</td>
+                          <td class="tRight">1.99</td>
+                          <td class="tRight">1.99</td>	
+                          <td class="tRight">1,439.47		</td>
+                          <td class="tRight">1.2803   		</td>
+                          <td class="nbr tRight">1,408.19	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('CHF'); return false;">
+                                        CHF<span style="font-size:11px;">(스위스 프랑)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">1,114.23		</td>
+                          <td class="tRight">1,125.37		</td>
+                          <td class="tRight">1,103.09		</td>
+                          <td class="tRight">1,136.40		</td>
+                          <td class="tRight">1,092.06		</td>
+                          <td class="tRight">1.99</td>
+                          <td class="tRight">1.99</td>	
+                          <td class="tRight">1,127.60		</td>
+                          <td class="tRight">1.0029   		</td>
+                          <td class="nbr tRight">1,103.09	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('CAD'); return false;">
+                                        CAD<span style="font-size:11px;">(캐나다 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">844.03		</td>
+                          <td class="tRight">852.47		</td>
+                          <td class="tRight">835.59		</td>
+                          <td class="tRight">860.82		</td>
+                          <td class="tRight">827.24		</td>
+                          <td class="tRight">1.99</td>
+                          <td class="tRight">1.99</td>	
+                          <td class="tRight">854.15		</td>
+                          <td class="tRight">0.7597   		</td>
+                          <td class="nbr tRight">835.59	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('AUD'); return false;">
+                                        AUD<span style="font-size:11px;">(오스트레일리아 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">821.25		</td>
+                          <td class="tRight">829.46		</td>
+                          <td class="tRight">813.04		</td>
+                          <td class="tRight">837.59		</td>
+                          <td class="tRight">804.91		</td>
+                          <td class="tRight">1.99</td>
+                          <td class="tRight">1.99</td>	
+                          <td class="tRight">831.10		</td>
+                          <td class="tRight">0.7392   		</td>
+                          <td class="nbr tRight">813.04	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('NZD'); return false;">
+                                        NZD<span style="font-size:11px;">(뉴질랜드 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">769.92		</td>
+                          <td class="tRight">777.61		</td>
+                          <td class="tRight">762.23		</td>
+                          <td class="tRight">785.24		</td>
+                          <td class="tRight">754.60		</td>
+                          <td class="tRight">1.99</td>
+                          <td class="tRight">1.99</td>	
+                          <td class="tRight">779.15		</td>
+                          <td class="tRight">0.6930   		</td>
+                          <td class="nbr tRight">762.23	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('HKD'); return false;">
+                                        HKD<span style="font-size:11px;">(홍콩 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">142.05		</td>
+                          <td class="tRight">143.47		</td>
+                          <td class="tRight">140.63		</td>
+                          <td class="tRight">144.87		</td>
+                          <td class="tRight">139.23		</td>
+                          <td class="tRight">1.99</td>
+                          <td class="tRight">1.99</td>	
+                          <td class="tRight">143.75		</td>
+                          <td class="tRight">0.1279   		</td>
+                          <td class="nbr tRight">140.63	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('CNY'); return false;">
+                                        CNY<span style="font-size:11px;">(중국 위안)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">161.44		</td>
+                          <td class="tRight">163.05		</td>
+                          <td class="tRight">159.83		</td>
+                          <td class="tRight">171.12		</td>
+                          <td class="tRight">153.37		</td>
+                          <td class="tRight">6.00</td>
+                          <td class="tRight">5.00</td>	
+                          <td class="tRight">171.12		</td>
+                          <td class="tRight">0.1453   		</td>
+                          <td class="nbr tRight">159.83	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('SEK'); return false;">
+                                        SEK<span style="font-size:11px;">(스웨덴 크로네)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">122.87		</td>
+                          <td class="tRight">124.09		</td>
+                          <td class="tRight">121.65		</td>
+                          <td class="tRight">125.94		</td>
+                          <td class="tRight">119.80		</td>
+                          <td class="tRight">2.50</td>
+                          <td class="tRight">2.50</td>	
+                          <td class="tRight">124.34		</td>
+                          <td class="tRight">0.1106   		</td>
+                          <td class="nbr tRight">121.65	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('DKK'); return false;">
+                                        DKK<span style="font-size:11px;">(덴마크 크로네)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">169.25		</td>
+                          <td class="tRight">170.94		</td>
+                          <td class="tRight">167.56		</td>
+                          <td class="tRight">173.48		</td>
+                          <td class="tRight">165.02		</td>
+                          <td class="tRight">2.50</td>
+                          <td class="tRight">2.50</td>	
+                          <td class="tRight">171.28		</td>
+                          <td class="tRight">0.1523   		</td>
+                          <td class="nbr tRight">167.56	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('NOK'); return false;">
+                                        NOK<span style="font-size:11px;">(노르웨이 크로네)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">130.33		</td>
+                          <td class="tRight">131.63		</td>
+                          <td class="tRight">129.03		</td>
+                          <td class="tRight">133.58		</td>
+                          <td class="tRight">127.08		</td>
+                          <td class="tRight">2.50</td>
+                          <td class="tRight">2.50</td>	
+                          <td class="tRight">131.89		</td>
+                          <td class="tRight">0.1173   		</td>
+                          <td class="nbr tRight">129.03	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('SAR'); return false;">
+                                        SAR<span style="font-size:11px;">(사우디아라비아 리얄)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">296.11		</td>
+                          <td class="tRight">299.07		</td>
+                          <td class="tRight">293.15		</td>
+                          <td class="tRight">310.91		</td>
+                          <td class="tRight">275.39		</td>
+                          <td class="tRight">5.00</td>
+                          <td class="tRight">7.00</td>	
+                          <td class="tRight">299.66		</td>
+                          <td class="tRight">0.2665   		</td>
+                          <td class="nbr tRight">293.15	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('KWD'); return false;">
+                                        KWD<span style="font-size:11px;">(쿠웨이트 디나르)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">3,652.20		</td>
+                          <td class="tRight">3,688.72		</td>
+                          <td class="tRight">3,615.68		</td>
+                          <td class="tRight">3,871.33		</td>
+                          <td class="tRight">3,360.03		</td>
+                          <td class="tRight">6.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">3,696.02		</td>
+                          <td class="tRight">3.2873   		</td>
+                          <td class="nbr tRight">3,615.68	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('BHD'); return false;">
+                                        BHD<span style="font-size:11px;">(바레인 디나르)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">2,947.73		</td>
+                          <td class="tRight">2,977.20		</td>
+                          <td class="tRight">2,918.26		</td>
+                          <td class="tRight">3,124.59		</td>
+                          <td class="tRight">2,711.92		</td>
+                          <td class="tRight">6.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">2,983.10		</td>
+                          <td class="tRight">2.6532   		</td>
+                          <td class="nbr tRight">2,918.26	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('AED'); return false;">
+                                        AED<span style="font-size:11px;">(아랍에미리트 디르함)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">302.47		</td>
+                          <td class="tRight">305.49		</td>
+                          <td class="tRight">299.45		</td>
+                          <td class="tRight">317.59		</td>
+                          <td class="tRight">281.30		</td>
+                          <td class="tRight">5.00</td>
+                          <td class="tRight">7.00</td>	
+                          <td class="tRight">306.09		</td>
+                          <td class="tRight">0.2723   		</td>
+                          <td class="nbr tRight">299.45	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('THB'); return false;">
+                                        THB<span style="font-size:11px;">(태국 바트)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">33.91		</td>
+                          <td class="tRight">34.24		</td>
+                          <td class="tRight">33.58		</td>
+                          <td class="tRight">35.93		</td>
+                          <td class="tRight">31.54		</td>
+                          <td class="tRight">5.96</td>
+                          <td class="tRight">7.00</td>	
+                          <td class="tRight">34.31		</td>
+                          <td class="tRight">0.0305   		</td>
+                          <td class="nbr tRight">33.58	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('SGD'); return false;">
+                                        SGD<span style="font-size:11px;">(싱가포르 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">813.32		</td>
+                          <td class="tRight">821.45		</td>
+                          <td class="tRight">805.19		</td>
+                          <td class="tRight">829.58		</td>
+                          <td class="tRight">797.06		</td>
+                          <td class="tRight">2.00</td>
+                          <td class="tRight">2.00</td>	
+                          <td class="tRight">823.07		</td>
+                          <td class="tRight">0.7321   		</td>
+                          <td class="nbr tRight">805.19	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('IDR'); return false;">
+                                        IDR<span style="font-size:11px;">(인도네시아 100 루피아)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">7.81		</td>
+                          <td class="tRight">7.88		</td>
+                          <td class="tRight">7.74		</td>
+                          <td class="tRight">8.43		</td>
+                          <td class="tRight">6.96		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">11.00</td>	
+                          <td class="tRight">7.90		</td>
+                          <td class="tRight">0.0070   		</td>
+                          <td class="nbr tRight">7.74	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('ZAR'); return false;">
+                                        ZAR<span style="font-size:11px;">(남아프리카공화국 랜드)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">81.52		</td>
+                          <td class="tRight">81.52		</td>
+                          <td class="tRight">81.52		</td>
+                          <td class="tRight">88.04		</td>
+                          <td class="tRight">75.00		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">81.52		</td>
+                          <td class="tRight">0.0734   		</td>
+                          <td class="nbr tRight">81.52	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('RUB'); return false;">
+                                        RUB<span style="font-size:11px;">(러시아 루블)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">16.71		</td>
+                          <td class="tRight">16.87		</td>
+                          <td class="tRight">16.55		</td>
+                          <td class="tRight">18.04		</td>
+                          <td class="tRight">14.71		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">12.00</td>	
+                          <td class="tRight">16.71		</td>
+                          <td class="tRight">0.0150   		</td>
+                          <td class="nbr tRight">16.55	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('HUF'); return false;">
+                                        HUF<span style="font-size:11px;">(헝가리 포린트)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">3.92		</td>
+                          <td class="tRight">3.92		</td>
+                          <td class="tRight">3.92		</td>
+                          <td class="tRight">4.23		</td>
+                          <td class="tRight">3.61		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">3.92		</td>
+                          <td class="tRight">0.0035   		</td>
+                          <td class="nbr tRight">3.92	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('PLN'); return false;">
+                                        PLN<span style="font-size:11px;">(폴란드 즐로티)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">295.09		</td>
+                          <td class="tRight">298.04		</td>
+                          <td class="tRight">292.14		</td>
+                          <td class="tRight">318.69		</td>
+                          <td class="tRight">274.44		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">7.00</td>	
+                          <td class="tRight">295.09		</td>
+                          <td class="tRight">0.2656   		</td>
+                          <td class="nbr tRight">292.14	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('INR'); return false;">
+                                        INR<span style="font-size:11px;">(인도 루피)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">15.87		</td>
+                          <td class="tRight">15.87		</td>
+                          <td class="tRight">15.87		</td>
+                          <td class="tRight">17.29		</td>
+                          <td class="tRight">14.45		</td>
+                          <td class="tRight">9.00</td>
+                          <td class="tRight">9.00</td>	
+                          <td class="tRight">15.87		</td>
+                          <td class="tRight">0.0143   		</td>
+                          <td class="nbr tRight">15.87	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('MYR'); return false;">
+                                        MYR<span style="font-size:11px;">(말레이시아 링깃)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">266.30		</td>
+                          <td class="tRight">268.96		</td>
+                          <td class="tRight">263.64		</td>
+                          <td class="tRight">282.27		</td>
+                          <td class="tRight">245.00		</td>
+                          <td class="tRight">6.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">269.49		</td>
+                          <td class="tRight">0.2397   		</td>
+                          <td class="nbr tRight">263.64	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('PKR'); return false;">
+                                        PKR<span style="font-size:11px;">(파키스탄 루피)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">7.99		</td>
+                          <td class="tRight">7.99		</td>
+                          <td class="tRight">7.99		</td>
+                          <td class="tRight">8.62		</td>
+                          <td class="tRight">7.36		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">7.99		</td>
+                          <td class="tRight">0.0072   		</td>
+                          <td class="nbr tRight">7.99	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('BDT'); return false;">
+                                        BDT<span style="font-size:11px;">(방글라데시 타카)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">13.24		</td>
+                          <td class="tRight">13.24		</td>
+                          <td class="tRight">13.24		</td>
+                          <td class="tRight">14.29		</td>
+                          <td class="tRight">12.19		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">13.24		</td>
+                          <td class="tRight">0.0119   		</td>
+                          <td class="nbr tRight">13.24	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('PHP'); return false;">
+                                        PHP<span style="font-size:11px;">(필리핀 페소)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">21.22		</td>
+                          <td class="tRight">21.43		</td>
+                          <td class="tRight">21.01		</td>
+                          <td class="tRight">23.34		</td>
+                          <td class="tRight">19.74		</td>
+                          <td class="tRight">10.00</td>
+                          <td class="tRight">7.00</td>	
+                          <td class="tRight">21.22		</td>
+                          <td class="tRight">0.0191   		</td>
+                          <td class="nbr tRight">21.01	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('EGP'); return false;">
+                                        EGP<span style="font-size:11px;">(이집트 파운드)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">62.01		</td>
+                          <td class="tRight">62.01		</td>
+                          <td class="tRight">62.01		</td>
+                          <td class="tRight">66.97		</td>
+                          <td class="tRight">57.67		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">7.00</td>	
+                          <td class="tRight">62.01		</td>
+                          <td class="tRight">0.0558   		</td>
+                          <td class="nbr tRight">62.01	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('MXN'); return false;">
+                                        MXN<span style="font-size:11px;">(멕시코 페소)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">55.50		</td>
+                          <td class="tRight">55.50		</td>
+                          <td class="tRight">55.50		</td>
+                          <td class="tRight">59.94		</td>
+                          <td class="tRight">51.06		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">55.50		</td>
+                          <td class="tRight">0.0500   		</td>
+                          <td class="nbr tRight">55.50	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('BRL'); return false;">
+                                        BRL<span style="font-size:11px;">(브라질 리얄)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">287.31		</td>
+                          <td class="tRight">287.31		</td>
+                          <td class="tRight">287.31		</td>
+                          <td class="tRight">310.29		</td>
+                          <td class="tRight">264.33		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">287.31		</td>
+                          <td class="tRight">0.2586   		</td>
+                          <td class="nbr tRight">287.31	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('BND'); return false;">
+                                        BND<span style="font-size:11px;">(브루나이 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">811.36		</td>
+                          <td class="tRight">811.36		</td>
+                          <td class="tRight">811.36		</td>
+                          <td class="tRight">843.81		</td>
+                          <td class="tRight">762.68		</td>
+                          <td class="tRight">4.00</td>
+                          <td class="tRight">6.00</td>	
+                          <td class="tRight">811.36		</td>
+                          <td class="tRight">0.7303   		</td>
+                          <td class="nbr tRight">811.36	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('TWD'); return false;">
+                                        TWD<span style="font-size:11px;">(타이완 달러)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">36.14		</td>
+                          <td class="tRight">36.14		</td>
+                          <td class="tRight">36.14		</td>
+                          <td class="tRight">39.03		</td>
+                          <td class="tRight">33.62		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">7.00</td>	
+                          <td class="tRight">36.14		</td>
+                          <td class="tRight">0.0325   		</td>
+                          <td class="nbr tRight">36.14	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('ILS'); return false;">
+                                        ILS<span style="font-size:11px;">(이스라엘 세켈)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">299.00		</td>
+                          <td class="tRight">299.00		</td>
+                          <td class="tRight">299.00		</td>
+                          <td class="tRight">322.92		</td>
+                          <td class="tRight">275.08		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">299.00		</td>
+                          <td class="tRight">0.2691   		</td>
+                          <td class="nbr tRight">299.00	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('JOD'); return false;">
+                                        JOD<span style="font-size:11px;">(요르단 디나르)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">1,565.89		</td>
+                          <td class="tRight">1,565.89		</td>
+                          <td class="tRight">1,565.89		</td>
+                          <td class="tRight">1,628.52		</td>
+                          <td class="tRight">1,440.62		</td>
+                          <td class="tRight">4.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">1,565.89		</td>
+                          <td class="tRight">1.4094   		</td>
+                          <td class="nbr tRight">1,565.89	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('VND'); return false;">
+                                        VND<span style="font-size:11px;">(베트남 100 동)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">4.77		</td>
+                          <td class="tRight">4.77		</td>
+                          <td class="tRight">4.77		</td>
+                          <td class="tRight">5.34		</td>
+                          <td class="tRight">4.20		</td>
+                          <td class="tRight">12.00</td>
+                          <td class="tRight">12.00</td>	
+                          <td class="tRight">4.77		</td>
+                          <td class="tRight">0.0043   		</td>
+                          <td class="nbr tRight">4.77	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('KZT'); return false;">
+                                        KZT<span style="font-size:11px;">(카자흐스탄 텡게)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">2.98		</td>
+                          <td class="tRight">3.00		</td>
+                          <td class="tRight">2.96		</td>
+                          <td class="tRight">3.33		</td>
+                          <td class="tRight">2.63		</td>
+                          <td class="tRight">12.00</td>
+                          <td class="tRight">12.00</td>	
+                          <td class="tRight">2.98		</td>
+                          <td class="tRight">0.0027   		</td>
+                          <td class="nbr tRight">2.96	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('TRY'); return false;">
+                                        TRY<span style="font-size:11px;">(터키 리라)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">214.23		</td>
+                          <td class="tRight">216.37		</td>
+                          <td class="tRight">212.09		</td>
+                          <td class="tRight">231.36		</td>
+                          <td class="tRight">197.10		</td>
+                          <td class="tRight">8.00</td>
+                          <td class="tRight">8.00</td>	
+                          <td class="tRight">214.23		</td>
+                          <td class="tRight">0.1928   		</td>
+                          <td class="nbr tRight">212.09	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                     <a href="javascript:" onclick="javascript:uf_goLink('CZK'); return false;">
+                                        CZK<span style="font-size:11px;">(체코 코루나)</span>
+                                     </a>
+                                
+                                
+                              
+                          </td>
+                          <td class="tRight">48.48		</td>
+                          <td class="tRight">48.96		</td>
+                          <td class="tRight">48.00		</td>
+                          <td class="tRight">51.87		</td>
+                          <td class="tRight">44.12		</td>
+                          <td class="tRight">7.00</td>
+                          <td class="tRight">9.00</td>	
+                          <td class="tRight">48.48		</td>
+                          <td class="tRight">0.0436   		</td>
+                          <td class="nbr tRight">48.00	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                
+                                    MNT<span style="font-size:11px;">(몽골 터그럭)</span>
+                                
+                              
+                          </td>
+                          <td class="tRight">0.42		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-</td>
+                          <td class="tRight">-</td>	
+                          <td class="tRight">-		</td>
+                          <td class="tRight">0.0004   		</td>
+                          <td class="nbr tRight">-	</td>
+                     </tr>
+                     
+                     
+                	
+                      	
+                      <tr>
+                          <td scope="row">
+                              
+                                
+                                
+                                    QAR<span style="font-size:11px;">(카타르 리알)</span>
+                                
+                              
+                          </td>
+                          <td class="tRight">305.12		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-		</td>
+                          <td class="tRight">-</td>
+                          <td class="tRight">-</td>	
+                          <td class="tRight">-		</td>
+                          <td class="tRight">0.2746   		</td>
+                          <td class="nbr tRight">-	</td>
+                     </tr>
+                     
+                     
+                
+            </tbody>
+        </table>
+    </div>
+    	
+
+	<div class="inq_btn_area">
+		<div class="fl">
+			<span class="btn small icon"><span class="left prev"><input type="button" value="전일" id="전일2" onclick='javascript:uf_setFocusBtn(this); uf_yesterday("2018.12.03"); return false;'/></span></span>
+			<span class="btn small icon"><span class="left next"><input type="button" value="다음일" id="익일2" onclick='javascript:uf_setFocusBtn(this); uf_tomorrow("2018.12.03"); return false;'/></span></span>
+		</div>
+        
+		<div class="fr">
+        
+			<span class="btn small icon"><span class="left excel"><input type="button"  name="저장" value="저장" /></span></span>
+			<span class="btn small icon"><span class="right blank"><input title = "새창 열림" type="button" name="인쇄" value="인쇄" /></span></span>
+        
+		</div>
+	</div>
+</div>
+<div class="box_type1">
+	<ul class="list_type1">
+		<li>스프레드란?<br/>매매기준율과 외화 현찰 사실 때 또는 파실 때 환율 차이의 환산율</li>
+	</ul>
+</div>
+				
+			
+</form>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+	
+	function uf_inquery() {
+		var f = document.IBF;
+		var year1 = $('#year1 > option:selected').val();
+		var mon1  = $('#mon1  > option:selected').val();
+		var day1  = $('#day1  > option:selected').val();
+
+		var inqueryDate = year1 + mon1 + day1;
+		var round = $('#se_inqueryRound > option:selected').val();
+		    
+		if (20181203 != inqueryDate) {
+	        f.elements['등록회차'].value = "1";
+		} else {
+	        f.elements['등록회차'].value = round;
+		}                 
+		
+		f.action="/quics?page=C015690&cc=b028286:b028286";
+		f.elements['조회년월일'].value = inqueryDate;
+		f.target    = "_self";
+		doAjaxCC(f);
+		return false;
+	}
+
+	    
+	
+	function uf_goLink(natlCd) {
+		var f = document.IBF;
+	    f.elements['monyCd'].value = natlCd;
+      f.method = "post";
+      
+	    if("ofex" == "ofex"){
+	    	f.action = "/quics?page=C015706";
+	    }else{
+	    	f.action = "/quics?page=C015690&cc=b028286:b028296";  
+	    }
+		doAjaxCC(f);
+		return false;
+	}
+	
+    
+    function uf_yesterday(s_bdate) {
+    	var f = document.IBF;
+        var yyyy = s_bdate.substring(0,4);
+        var mm   = s_bdate.substring(5,7);
+        var dd   = s_bdate.substring(8);
+        var s_date = yyyy + mm + dd;
+        f.elements['조회년월일'].value = shiftDate(s_date, 0, 0, -1);
+        f.elements['등록회차'].value   = "00000"; //익일 거래시 회차는 "00000"으로 마지막 회차를 가져온다
+        f.action    = "/quics?page=C015690&cc=b028286:b028286";
+        f.target    = "_self";
+        doAjaxCC(f);
+	    return false;
+    }
+    
+    
+    function uf_tomorrow(s_bdate) {
+    	var f = document.IBF;
+        var yyyy = s_bdate.substring(0,4);
+        var mm   = s_bdate.substring(5,7);
+        var dd   = s_bdate.substring(8);
+        var s_date = yyyy + mm + dd;
+        f.elements['조회년월일'].value = shiftDate(s_date, 0, 0, +1);
+        f.elements['등록회차'].value   = "00000"; //익일 거래시 회차는 "00000"으로 마지막 회차를 가져온다
+        f.action    = "/quics?page=C015690&cc=b028286:b028286";
+        f.target    = '_self';
+	    doAjaxCC(f);
+	    return false;
+    }
+    
+    
+    function uf_lastday(s_bdate) {
+    	var f = document.IBF;
+        var s_date = s_bdate;
+    
+        f.elements['조회년월일'].value = s_date;
+        f.elements['등록회차'].value   = "1";
+        f.action    = "/quics?page=C015690/>";
+        f.target    = '_self';
+	    doAjaxCC(f);
+	    return false;
+    }
+    
+     
+    function uf_save() {
+        var f = document.IBF;
+        var pageId = "542987";
+        var strEftDate = "2018.12.03";
+        var fileTag    = "117";
+        var downFileName   = "환율조회(" + strEftDate + "_" + fileTag + ").xls";
+        var listFieldName  = "ARRAY수";
+        var param = "DataListFieldName=" +  listFieldName; 
+
+        if (confirm("조회된 고시환율을 저장합니다.\n저장하시겠습니까?")) {
+
+            OpenStreamDownload(downFileName, pageId, param);
+
+        }
+    }
+    
+    
+    function uf_setFocusBtn( objBtn ){
+      if(objBtn != null) {
+        $("#strFocusBtn").val(objBtn.id);
+      } 
+    }
+    
+    
+    function uf_focusIn(){
+    	var foucsBtnId = '';
+      $("#"+foucsBtnId).focus();    
+    }
+
+    $(document).ready(function () {
+            	
+        $('#uf_save').click(function () { 
+        	if ("" != "1") uf_save(); 
+        });
+        
+        $('input[name=uf_print]').click(function () {  
+            if ("" != "1")
+            	window.print();
+            	//printPopup("", document.IBF, "targetTable", "환율조회", 800, 600);
+        });  
+        
+        
+        $('input[name=dsp_mode]').toggle(
+        	function () {  
+        		$('#majorDsp1').hide();
+        		$('#majorDsp2').hide();
+                $('#AllDsp1').show();
+                $('#AllDsp2').show();
+                $('input[name=dsp_mode]').val("주요통화 보기");
+        	},
+        	function () {
+            	$('#majorDsp1').show();
+            	$('#majorDsp2').show();
+                $('#AllDsp1').hide();	
+                $('#AllDsp2').hide();	
+                $('input[name=dsp_mode]').val("전체통화 보기");
+        }); 
+        
+
+        $('input[name="조회"]').click(function(){
+        	uf_inquery();
+        	return false;
+        });
+
+        $('input[name="저장"]').click(function(){
+        	uf_save();
+        	return false;
+        });
+
+        $('input[name="인쇄"]').click(function(){
+        	printPopup("/quics?page=C019465&cc=b028364:", document.IBF, "targetTable", "환율조회", 800, 600);
+        	return false;
+        });
+
+
+        $('.goLink').click(function(){
+        	var strNatlCd = $(this).text();
+        	var code = strNatlCd.substring(0,3);
+        	uf_goLink(code);
+        	return false;
+        });
+
+	
+		$("#day1").change(function(){
+			$("#se_inqueryRound option:eq(0)").attr("selected", "selected");
+		});
+		
+		
+    var foucsBtnId = '';
+    
+    if(foucsBtnId != null && foucsBtnId != ""){
+      setTimeout(uf_focusIn, 10); 
+    }
+		
+    });
+    
+    
+//]]>
+</script>
+</div>
+</div>		    </div></div><div class="footWrap_2015">    <div id="BOTTOM_2015">
+<div id="b039725">
+<!-- Help Desk -->
+<div class="ofexMain helpDesk_2015">
+    <h3 class="readonly">Help Desk 도움이 필요하세요?</h3>
+    <div class="box01">
+        <h4><img src="https://oimg1.kbstar.com/img/ofex/2015/tit_ofex_ptal.png" alt="외환포탈 이용안내" /></h4>
+        <ul class="noticeList">
+           <li><a href="/quics?page=C023945">거래수수료 안내</a></li>
+           <li><a href="/quics?page=C023946">이용시 혜택 안내</a></li>
+           <li><a href="/quics?page=C023947">개인고객을 위한 안내</a></li>
+           <li><a href="/quics?page=C023948">기업고객을 위한 안내</a></li>
+           <li><a href="/quics?page=C023192">외환서식 프로그램 안내</a></li>
+           <li class="btn_area"><a href="/quics?page=C023887" target="_blank" class="btn_go_sal">서비스 이용시간 안내</a></li>
+        </ul>
+    </div>
+    <div class="box02">
+        <h4><img src="https://oimg1.kbstar.com/img/ofex/2015/tit_exchange_service.png" alt="환율제공서비스" /></h4>
+        <ul class="noticeList">
+            <li>환율 계산기
+				<span class="addTxt"><a href="#none" onclick="popup_open('/quics?page=C021529&amp;QSL=F'); return false;">환전</a>
+				<a href="#none" onclick="popup_open('/quics?page=C021530&amp;QSL=F'); return false;">외화송금</a></span>
+			</li>
+			<li><a href="/quics?page=C015705">맞춤환율 통지서비스 등록</a></li>
+			<li><a href="/quics?page=C018604">무료 환율표</a></li>
+        </ul>
+    </div>
+    <div class="box03">
+        <h4><a href="/quics?page=C018872" class="viewMore" title="더보기"><img src="https://oimg1.kbstar.com/img/obank/2015/tit_certify.png" alt="공인인증센터" /></a></h4>
+        <ul class="noticeList">
+            <li><a href="/quics?page=C019620">공인인증서 발급/재발급</a></li>
+            <li><a href="/quics?page=C019652">타행/타기관 인증서 등록</a></li>
+            <li><a href="/quics?page=C019624">인증서 갱신</a></li>
+            <li><a href="/quics?page=C019647">전자세금용인증서 발급</a></li>
+        </ul>
+    </div> 
+    <div class="box04">
+        <h4><a href="/quics?page=osupp" class="viewMore" title="더보기"><img src="https://oimg1.kbstar.com/img/obank/2015/b_guide_tit04.png" alt="고객센터" /></a></h4>
+        <ul class="noticeList">
+            <li>국내 1644-9999,1599-9999</li>
+            <li class="ntcAdd">외국인전용 1599-4477<span class="addTxt">(영어, 중국어, 일본어, 베트남어, 러시아어)</span></li>
+            <li>해외 82-2-6300-9999</li>
+			<li><a href="/quics?page=C019777">외환FAQ</a></li>
+            <li class="btn_area"><a href="/quics?page=C023172" class="btn_go_sal">ARS 코드 안내</a></li>
+        </ul>
+    </div>
+</div>            
+<script type="text/javascript">
+//<![CDATA[
+	function popup_open(url)
+	{
+		var nLeft = screen.width/2 - 880/2 ;
+		var nTop  = screen.height/2 - 700/2 ;
+		opt = ",toolbar=no,menubar=no,location=no,status=no,scrollbars=yes";
+		window.open(url, "외환_금융계산기", "left=" + nLeft + ",top=" +  nTop + ",width=880,height=700" + opt );
+	}
+//]]>
+</script>
+<!-- //Help Desk -->
+
+</div>
+</div>    <div id="FOOTER_2015">
+<div id="b034108">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--BrowserDetect는 common.js에 정의되어 있음. -->
+$(function(){
+$('#thisBrowser').html(BrowserDetect.browser+' '+BrowserDetect.version);
+$('#thisOS').html(BrowserDetect.OS);
+})
+</script>
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+function improvementOpinion(){
+
+	//팝업위치 조정
+	var windowsWidth = document.documentElement.clientWidth;
+	//var windowsHeight = document.documentElement.clientHeight;
+	var left = document.documentElement.clientWidth/2 - 285;
+	//var height = document.documentElement.clientHeight/2 - 430;
+
+	var frm	= document.FeedBack;
+	window.open('','Feedback','top=80,left='+left+',height=860,width=570,status=yes,toolbar=no,menubar=no,scrollbars=yes');
+	frm.target="Feedback";
+	frm.action = "/quics?page=C030231&QSL=F";
+	frm.submit();
+}
+
+function improvementOpinion2(){
+	alert("로그인 사용자만 이용가능합니다. ");
+	return false;
+
+}
+
+//]]>
+</script>
+<form name="FeedBack" method="post" action="">
+<input type="hidden" name="페이지코드" id="pageCode" value="C015690"/>
+<input type="hidden" name="컴포넌트코드" id="ComponentCode" value=""/>
+<input type="hidden" name="로그인여부" id="strLoginYn" value="N"/>
+</form>
+
+
+
+
+                <div class="foot_area_2015">
+				<ul class="foot_info">
+					<li><a href="/quics?page=C019763">이용상담</a></li>
+					<li><a href="/quics?page=C040531">보안프로그램</a></li>
+					<li><a href="/quics?page=C019935">사고신고</a></li>
+					<li><a href="/quics?page=C023000">보호금융상품등록부</a></li>
+					<li><a href="/quics?page=C036346"><strong>전자민원접수</strong></a></li>
+					<li><a href="/quics?page=C061976"><strong>개인정보처리방침</strong></a></li>
+					<li><a href="/quics?page=C017681"><strong>경영공시</strong></a></li>
+					<li><a href="/quics?page=C040593">그룹 내 고객정보 제공안내</a></li>
+					<li><a href="/quics?page=C057315">스튜어드십 코드</a></li><!-- 2018-03-09 -->
+				</ul>
+				<div class="combo_box_wrap">
+					<div class="foot_combo_box">
+						<div class="select_combo_2015">
+                            <div class="select_combo_open"><a href="#selectComboCompany"><span>KB금융그룹네트워크</span><span class="readonly"> 목록 열기</span></a></div>
+                            <div id="selectComboCompany" class="select_combo_box up" style="display:none;top:-417px;">
+								<ul class="select_style">
+									<li><a href="https://www.kbfg.com" target="_blank" title="새창열림">KB금융그룹</a></li>
+									<li><a href="http://www.kbsec.co.kr" target="_blank" title="새창열림">KB증권</a></li>
+									<li><a href="http://www.kbinsure.co.kr" target="_blank" title="새창열림">KB손해보험</a></li>
+									<li><a href="https://www.kbcard.com" target="_blank" title="새창열림">KB국민카드</a></li>
+									<li><a href="https://www.kbli.co.kr" target="_blank" title="새창열림">KB생명보험</a></li>
+									<li><a href="http://www.kbam.co.kr" target="_blank" title="새창열림">KB자산운용</a></li>
+									<li><a href="http://www.kbcapital.co.kr" target="_blank" title="새창열림">KB캐피탈</a></li>
+									<li><a href="https://www.kbsavings.com" target="_blank" title="새창열림">KB저축은행</a></li>
+									<li><a href="http://www.kbret.co.kr" target="_blank" title="새창열림">KB부동산신탁</a></li>
+									<li><a href="http://www.kbic.co.kr" target="_blank" title="새창열림">KB인베스트먼트</a></li>
+									<li><a href="http://www.kbci.co.kr" target="_blank" title="새창열림">KB신용정보</a></li>
+									<li><a href="http://www.kds.co.kr" target="_blank" title="새창열림">KB데이타시스템</a></li>
+									<li><a href="https://www.kbfg.com/kbresearch/main.do" target="_blank" title="새창열림">KB경영연구소</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="foot_combo_box phone">
+						<div class="select_combo_2015">
+						    <div class="select_combo_open"><a href="#selectComboPhone"><span>대표전화 1588-9999</span><span class="readonly">목록 열기</span></a></div>
+						    <div id="selectComboPhone" class="select_combo_box up" style="display:none;top: -463px;">
+
+								<table class="phone_table">
+									<caption>대표전화 외 전용전화번호 목록</caption>
+									<colgroup>
+										<col style="width:106px;" />
+										<col style="width:278px;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="col">대표전화</th>
+											<td>
+												<p>1588-9999, 1599-9999, 1644-9999</p>
+												<p><span>해외에서 국내로 걸 때</span><br/>+82-2-6300-9999</p>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col">상담전용</th>
+											<td>
+                                                                       <p>1800-9999</p>
+                                                                       <p><span>(분실 및 사고신고 제외)</span></p>
+                                                                 </td>
+										</tr>
+										<tr>
+											<th scope="col">기업전용</th>
+											<td>1599-9499</td>
+										</tr>
+										<tr>
+											<th scope="col">기업(B2B)</th>
+											<td>1566-9944</td>
+										</tr>
+										<tr>
+											<th scope="col">외국인전용</th>
+											<td>1599-4477</td>
+										</tr>
+                                                        <tr>
+											<th scope="col">어르신전용</th>
+											<td>1644-3308</td>
+										</tr>
+										<tr>
+											<th scope="col">ACS센터</th>
+											<td>
+												<p>1588-9008</p>
+												<p><span>해외에서 국내로 걸 때</span><br/>+82-42-603-0711</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="foot_combo_box email">
+						<a href="/quics?page=C043974"><span>이메일상담</span></a>
+					</div>
+					<div class="foot_combo_box chat">
+						<a href="/quics?page=C043954"><span>채팅상담(24시간 365일)</span></a>
+					</div>
+					<div class="foot_combo_box service" style="width:176px">
+						<div class="select_combo_2015">
+						<div class="select_combo_open"><a href="#selectComboService"><span>비교조회서비스</span><span class="readonly"> 열기</span></a></div>
+						<div id="selectComboService" class="select_combo_box up" style="display:none;top:-97px;">
+							<ul class="select_style">
+								<li><a href="http://www.kfb.or.kr/info/interest_product.html?S=FA" target="_blank" title="새창열림">은행금리비교</a></li>
+								<li><a href="http://finlife.fss.or.kr/main/main.do" target="_blank" title="새창열림">금융상품 한눈에</a></li>
+								<li><a href="http://fine.fss.or.kr/main/index.jsp" target="_blank" title="새창열림">금융소비자정보포털 &#39;파인&#39;</a></li>
+							</ul>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="foot_gra">
+					<ul>
+						<li class="facebook"><a href="https://www.facebook.com/kbkookminbank" target="_blank" title="새창열림">페이스북</a></li>
+						<!-- <li class="kakaostory"><a href="https://story.kakao.com/ch/kbkookminbank" target="_blank">카카오스토리</a></li> -->
+						<li class="instagram"><a href="https://instagram.com/kbkookminbank" target="_blank" title="새창열림">인스타그램</a></li>
+						<li class="youtube"><a href="https://www.youtube.com/user/openkbstar" target="_blank" title="새창열림">YouTube</a></li><!-- 2018-05-14 -->
+					</ul>
+				</div>
+				<p class="copy" style="display:inline-block;" onmouseover="$(this).next().show();" onmouseout="$(this).next().hide();">Copyright KB Kookmin Bank. All Rights Reserved.</p>
+				<ul id="userStats" style="display:none;top:125px">
+					<li id="thisBrowser"></li>
+					<li id="thisOS"></li>
+					<li>C015690 : 1551</li>
+				</ul>
+			</div>
+
+
+
+
+
+	
+
+<!-- 팝업공통 -->
+
+
+
+
+
+ 
+
+
+
+
+</div>
+</div></div></body></html>
