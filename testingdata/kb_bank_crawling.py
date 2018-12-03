@@ -1,6 +1,6 @@
 import re
 import requests
-f = open('output.php','w')
+f = open('kb_bank_output.php','w')
 s=requests.Session()
 req=s.get('https://okbfex.kbstar.com/quics?page=C015690#loading')
 html=req.text
