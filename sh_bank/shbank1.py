@@ -1,7 +1,7 @@
 import re
 import requests
 s=requests.Session()
-req=s.get('https://bank.shinhan.com/index.jsp#020501010000')
+req=s.get('https://bank.shinhan.com/index.jsp#020501010100')
 #req.encoding='euc-kr'
 html=req.text
 print(html)
