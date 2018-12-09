@@ -1,5 +1,5 @@
 <?php
-$src = "../taewoong_kb/kb_bank_output.php";
+$src = "../dg_bank/dg_bank_output.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

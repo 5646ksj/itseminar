@@ -52,19 +52,19 @@ $src = "../taewoong_kb/kb_bank_output.php";
           <h1 class="my-4">Each Bank</h1>
           <div class="list-group">
 	    <a href="index.php" class="list-group-item">CITI BANK</a>
-   	    <a href="#" class="list-group-item">DAEGOO BANK</a>
-	    <a href="#" class="list-group-item">IBK BANK</a>
-	    <a href="#" class="list-group-item">JB BANK</a>
-	    <a href="#" class="list-group-item">JEJU BANK</a>
-	    <a href="#" class="list-group-item">KB BANK</a>
-	    <a href="#" class="list-group-item">KEB BANK</a>
-	    <a href="#" class="list-group-item">BNK BANK</a>
-	    <a href="#" class="list-group-item">KYUNGNAM BANK</a>
-	    <a href="#" class="list-group-item">SHINHAN BANK</a>
-	    <a href="#" class="list-group-item">NH BANK</a>
-	    <a href="#" class="list-group-item">SHYUP BANK</a>
-	    <a href="#" class="list-group-item">STANDARD CHARTERED BANK</a>
-	    <a href="#" class="list-group-item">WOORI BANK</a>
+   	    <a href="daegoo.php" class="list-group-item">DAEGOO BANK</a>
+	    <a href="ibk.php" class="list-group-item">IBK BANK</a>
+	    <a href="jb.php" class="list-group-item">JB BANK</a>
+	    <a href="jeju.php" class="list-group-item">JEJU BANK</a>
+	    <a href="kb.php" class="list-group-item">KB BANK</a>
+	    <a href="keb.php" class="list-group-item">KEB BANK</a>
+	    <a href="bnk.php" class="list-group-item">BNK BANK</a>
+	    <a href="kn.php" class="list-group-item">KYUNGNAM BANK</a>
+	    <a href="shinhan.php" class="list-group-item">SHINHAN BANK</a>
+	    <a href="nh.php" class="list-group-item">NH BANK</a>
+	    <a href="shyup.php" class="list-group-item">SHYUP BANK</a>
+	    <a href="sc.php" class="list-group-item">STANDARD CHARTERED BANK</a>
+	    <a href="woori.php" class="list-group-item">WOORI BANK</a>
 
 
           </div>
