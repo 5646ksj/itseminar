@@ -9,7 +9,7 @@ if(body is None) :
         print("No <body> in html")
         exit()
 body=body.group()
-f=open('shyup_output.php','w')
+f=open('shyup_bank_output.php','w')
 f.write(body)
 f.close
 
