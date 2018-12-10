@@ -27,30 +27,30 @@ for($i=0;$i<3;$i++){
 }
 
 for($i=0;$i<3;$i++){
-	$wr_find=strpos($wr_bankar[$i][0],"일본");
-	$sh_find=strpos($sh_bankar[$i][0],"일본");
-	$nh_find=strpos($nh_bankar[$i][0],"일본");
-	$ibk_find=strpos($ibk_bankar[$i][0],"일본");
-	$st_ch_find=strpos($st_ch_bankar[$i][0],"일본");
-	$citi_find=strpos($citi_bankar[$i][0],"일본");
-	$shyup_find=strpos($shyup_bankar[$i][0],"일본");
-	$dg_find=strpos($dg_bankar[$i][0],"일본");
-	$jb_find=strpos($jb_bankar[$i][0],"일본");
-	$kn_find=strpos($kn_bankar[$i][0],"일본");
-	$jj_find=strpos($jj_bankar[$i][0],"일본");
+	$wr_find=strpos($wr_bankar[$i][0],"미국");
+	$sh_find=strpos($sh_bankar[$i][0],"미국");
+	$nh_find=strpos($nh_bankar[$i][0],"미국");
+	$ibk_find=strpos($ibk_bankar[$i][0],"미국");
+	$st_ch_find=strpos($st_ch_bankar[$i][0],"미국");
+	$citi_find=strpos($citi_bankar[$i][0],"미국");
+	$shyup_find=strpos($shyup_bankar[$i][0],"미국");
+	$dg_find=strpos($dg_bankar[$i][0],"미국");
+	$jb_find=strpos($jb_bankar[$i][0],"미국");
+	$kn_find=strpos($kn_bankar[$i][0],"미국");
+	$jj_find=strpos($jj_bankar[$i][0],"미국");
 	
 	if($wr_find!==false){
 		$wr_l=$wr_bankar[$i][1];
 		$wr_r=$wr_bankar[$i][2];
 	}
 	if($sh_find!==false){
-        	$sh_l=$sh_bankar[$i][1];
-		$sh_r=$sh_bankar[$i][2];
-	}
+                $sh_l=$sh_bankar[$i][1];
+                $sh_r=$sh_bankar[$i][2];
+		
+        }
 	if($nh_find!==false){
-               	$nh_l=$nh_bankar[$i][1];
+                $nh_l=$nh_bankar[$i][1];
                 $nh_r=$nh_bankar[$i][2];
-
         }
 	if($ibk_find!==false){
                 $ibk_l=$ibk_bankar[$i][1];
@@ -77,7 +77,7 @@ for($i=0;$i<3;$i++){
                 $jb_r=$jb_bankar[$i][2];
         }
 	if($kn_find!==false){
-                $kn_l=$kn_bankar[$i][1];
+               	$kn_l=$kn_bankar[$i][1];
                 $kn_r=$kn_bankar[$i][2];
         }
 	if($jj_find!==false){
@@ -86,6 +86,7 @@ for($i=0;$i<3;$i++){
         }
 }
 ?>
+
 <html>
         <head>
         </head>
