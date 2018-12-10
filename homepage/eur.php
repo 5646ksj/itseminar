@@ -1,5 +1,5 @@
 <?php
-$src = "../money/usd.php";
+$src = "../money/eur.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

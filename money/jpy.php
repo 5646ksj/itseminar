@@ -1,16 +1,16 @@
 <?php
-$wr_bank=file("/home/sejin/example/wr_bank/wr_bank_sb.php");
+$wr_bank=file("/var/www/html/wr_bank/wr_bank_sb.php");
 //$kb_bank=file("/home/sejin/example/kb_bank/kb_bank_sb.php");
-$sh_bank=file("/home/sejin/example/sh_bank/sh_bank_sb.php");
-$nh_bank=file("/home/sejin/example/nh_bank/nh_bank_sb.php");
-$ibk_bank=file("/home/sejin/example/ibk_bank/ibk_bank_sb.php");
-$st_ch_bank=file("/home/sejin/example/st_ch_bank/st_ch_bank_sb.php");
-$citi_bank=file("/home/sejin/example/citi_bank/citi_bank_sb.php");
-$shyup_bank=file("/home/sejin/example/shyup_bank/shyup_bank_sb.php");
-$dg_bank=file("/home/sejin/example/dg_bank/dg_bank_sb.php");
-$jb_bank=file("/home/sejin/example/jb_bank/jb_bank_sb.php");
-$kn_bank=file("/home/sejin/example/kn_bank/kn_bank_sb.php");
-$jj_bank=file("/home/sejin/example/jj_bank/jj_bank_sb.php");
+$sh_bank=file("/var/www/html/sh_bank/sh_bank_sb.php");
+$nh_bank=file("/var/www/html/nh_bank/nh_bank_sb.php");
+$ibk_bank=file("/var/www/html/ibk_bank/ibk_bank_sb.php");
+$st_ch_bank=file("/var/www/html/st_ch_bank/st_ch_bank_sb.php");
+$citi_bank=file("/var/www/html/citi_bank/citi_bank_sb.php");
+$shyup_bank=file("/var/www/html/shyup_bank/shyup_bank_sb.php");
+$dg_bank=file("/var/www/html/dg_bank/dg_bank_sb.php");
+$jb_bank=file("/var/www/html/jb_bank/jb_bank_sb.php");
+$kn_bank=file("/var/www/html/kn_bank/kn_bank_sb.php");
+$jj_bank=file("/var/www/html/jj_bank/jj_bank_sb.php");
 
 for($i=0;$i<3;$i++){
 	$wr_bankar[$i]=explode(',',$wr_bank[$i]);
@@ -92,17 +92,18 @@ for($i=0;$i<3;$i++){
 
         <body>
                 <table>
-                           <tr><td></td><td>살때</td><td>팔 때</td><td></td></tr>
-                <tr><td>경남은행</td><td><?php echo $kn_l;?> </td><td><?php echo $ibk_r;?> </td><td></td></tr>
-      <tr><td>우리은행</td><td><?php echo $wr_l;?> </td><td><?php echo $wr_r;?> </td><td></td></tr>
-      <tr><td>신한은행</td><td><?php echo $sh_l;?> </td><td><?php echo $sh_r;?> </td><td></td></tr>
-      <tr><td>농협</td><td><?php echo $nh_l;?> </td><td><?php echo $nh_r;?> </td><td></td></tr>
-      <tr><td>SC 은행</td><td><?php echo $st_ch_l;?> </td><td><?php echo $st_ch_r;?> </td><td></td></tr>
-      <tr><td>IBK은행</td><td><?php echo $ibk_l;?> </td><td><?php echo $ibk_r;?> </td><td></td></tr>
-      <tr><td>씨티은행</td><td><?php echo $citi_l;?> </td><td><?php echo $citi_r;?> </td><td></td></tr>
-      <tr><td>수협</td><td><?php echo $shyup_l;?> </td><td><?php echo $shyup_r;?> </td><td></td></tr>
-      <tr><td>전북은행</td><td><?php echo $jb_l;?> </td><td><?php echo $jb_r;?> </td><td></td></tr>
-      <tr><td>제주은행</td><td><?php echo $jj_l;?> </td><td><?php echo $jj_r;?> </td><td></td></tr>
+                         <tr><td></td><td>살때</td><td>팔 때</td><td></td></tr>
+               		 <tr><td>경남은행</td><td><?php echo $kn_l;?> </td><td><?php echo $ibk_r;?> </td><td></td></tr>
+     			 <tr><td>우리은행</td><td><?php echo $wr_l;?> </td><td><?php echo $wr_r;?> </td><td></td></tr>
+			 <tr><td>신한은행</td><td><?php echo $sh_l;?> </td><td><?php echo $sh_r;?> </td><td></td></tr>
+			 <tr><td>농협</td><td><?php echo $nh_l;?> </td><td><?php echo $nh_r;?> </td><td></td></tr>
+			 <tr><td>SC 은행</td><td><?php echo $st_ch_l;?> </td><td><?php echo $st_ch_r;?> </td><td></td></tr>
+			 <tr><td>IBK은행</td><td><?php echo $ibk_l;?> </td><td><?php echo $ibk_r;?> </td><td></td></tr>
+			 <tr><td>씨티은행</td><td><?php echo $citi_l;?> </td><td><?php echo $citi_r;?> </td><td></td></tr>
+			 <tr><td>수협</td><td><?php echo $shyup_l;?> </td><td><?php echo $shyup_r;?> </td><td></td></tr>
+			 <tr><td>전북은행</td><td><?php echo $jb_l;?> </td><td><?php echo $jb_r;?> </td><td></td></tr>
+			 <tr><td>제주은행</td><td><?php echo $jj_l;?> </td><td><?php echo $jj_r;?> </td><td></td></tr>
+
                 </table>
         </body>
 </html>
