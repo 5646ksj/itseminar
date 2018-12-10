@@ -103,6 +103,7 @@ for($i=0;$i<3;$i++){
 			 <tr><td>수협</td><td><?php echo $shyup_l;?> </td><td><?php echo $shyup_r;?> </td><td></td></tr>
 			 <tr><td>전북은행</td><td><?php echo $jb_l;?> </td><td><?php echo $jb_r;?> </td><td></td></tr>
 			 <tr><td>제주은행</td><td><?php echo $jj_l;?> </td><td><?php echo $jj_r;?> </td><td></td></tr>
+
                 </table>
         </body>
 </html>
