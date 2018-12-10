@@ -1,16 +1,16 @@
 <?php
-$wr_bank=file("/home/sejin/example/wr_bank/wr_bank_sb.php");
-//$kb_bank=file("/home/sejin/example/kb_bank/kb_bank_sb.php");
-$sh_bank=file("/home/sejin/example/sh_bank/sh_bank_sb.php");
-$nh_bank=file("/home/sejin/example/nh_bank/nh_bank_sb.php");
-$ibk_bank=file("/home/sejin/example/ibk_bank/ibk_bank_sb.php");
-$st_ch_bank=file("/home/sejin/example/st_ch_bank/st_ch_bank_sb.php");
-$citi_bank=file("/home/sejin/example/citi_bank/citi_bank_sb.php");
-$shyup_bank=file("/home/sejin/example/shyup_bank/shyup_bank_sb.php");
-$dg_bank=file("/home/sejin/example/dg_bank/dg_bank_sb.php");
-$jb_bank=file("/home/sejin/example/jb_bank/jb_bank_sb.php");
-$kn_bank=file("/home/sejin/example/kn_bank/kn_bank_sb.php");
-$jj_bank=file("/home/sejin/example/jj_bank/jj_bank_sb.php");
+$wr_bank=file("/var/www/html/wr_bank/wr_bank_sb.php");
+//$kb_bank=file("/var/www/html/kb_bank/kb_bank_sb.php");
+$sh_bank=file("/var/www/html/sh_bank/sh_bank_sb.php");
+$nh_bank=file("/var/www/html/nh_bank/nh_bank_sb.php");
+$ibk_bank=file("/var/www/html/ibk_bank/ibk_bank_sb.php");
+$st_ch_bank=file("/var/www/html/st_ch_bank/st_ch_bank_sb.php");
+$citi_bank=file("/var/www/html/citi_bank/citi_bank_sb.php");
+$shyup_bank=file("/var/www/html/shyup_bank/shyup_bank_sb.php");
+$dg_bank=file("/var/www/html/dg_bank/dg_bank_sb.php");
+$jb_bank=file("/var/www/html/jb_bank/jb_bank_sb.php");
+$kn_bank=file("/var/www/html/kn_bank/kn_bank_sb.php");
+$jj_bank=file("/var/www/html/jj_bank/jj_bank_sb.php");
 
 for($i=0;$i<8;$i++){
 	$wr_bankar[$i]=explode(',',$wr_bank[$i]);
@@ -31,7 +31,7 @@ for($i=0;$i<3;$i++){
 for($i=0;$i<3;$i++){
 	$kn_find=strpos($kn_bankar[$i][0],"유럽연합");
 	if($kn_find!==false){
-                echo "경남은행",$kn_bankar[$i][1] , $kn_bankar[$i][2],"\n";
+             //   echo "경남은행",$kn_bankar[$i][1] , $kn_bankar[$i][2],"\n";
         }
 }
 for($i=0;$i<8;$i++){
