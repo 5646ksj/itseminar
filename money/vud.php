@@ -1,3 +1,4 @@
+
 <?php
 $wr_bank=file("/home/sejin/example/wr_bank/wr_bank_sb.php");
 //$kb_bank=file("/home/sejin/example/kb_bank/kb_bank_sb.php");
@@ -11,33 +12,39 @@ $dg_bank=file("/home/sejin/example/dg_bank/dg_bank_sb.php");
 $jb_bank=file("/home/sejin/example/jb_bank/jb_bank_sb.php");
 $kn_bank=file("/home/sejin/example/kn_bank/kn_bank_sb.php");
 $jj_bank=file("/home/sejin/example/jj_bank/jj_bank_sb.php");
+for($i=0;$i<8;$i++){
+        $citi_bankar[$i]=explode(',',$citi_bank[$i]);
+}
+for($i=0;$i<8;$i++){
+        $citi_find=strpos($citi_bankar[$i][0],"호주");
+        if($citi_find!==false){
+                $citi_l=$citi_bankar[$i][1];
+		$citi_r=$citi_bankar[$i][2];
+        }
+}
 
-for($i=0;$i<3;$i++){
+for($i=0;$i<21;$i++){
 	$wr_bankar[$i]=explode(',',$wr_bank[$i]);
 	$sh_bankar[$i]=explode(',',$sh_bank[$i]);
 	$nh_bankar[$i]=explode(',',$nh_bank[$i]); 
 	$ibk_bankar[$i]=explode(',',$ibk_bank[$i]);
 	$st_ch_bankar[$i]=explode(',',$st_ch_bank[$i]); 
-	$citi_bankar[$i]=explode(',',$citi_bank[$i]);
 	$shyup_bankar[$i]=explode(',',$shyup_bank[$i]);
 	$dg_bankar[$i]=explode(',',$dg_bank[$i]);
 	$jb_bankar[$i]=explode(',',$jb_bank[$i]);
-	$kn_bankar[$i]=explode(',',$kn_bank[$i]); 
 	$jj_bankar[$i]=explode(',',$jj_bank[$i]);      	
 }
 
-for($i=0;$i<3;$i++){
-	$wr_find=strpos($wr_bankar[$i][0],"미국");
-	$sh_find=strpos($sh_bankar[$i][0],"미국");
-	$nh_find=strpos($nh_bankar[$i][0],"미국");
-	$ibk_find=strpos($ibk_bankar[$i][0],"미국");
-	$st_ch_find=strpos($st_ch_bankar[$i][0],"미국");
-	$citi_find=strpos($citi_bankar[$i][0],"미국");
-	$shyup_find=strpos($shyup_bankar[$i][0],"미국");
-	$dg_find=strpos($dg_bankar[$i][0],"미국");
-	$jb_find=strpos($jb_bankar[$i][0],"미국");
-	$kn_find=strpos($kn_bankar[$i][0],"미국");
-	$jj_find=strpos($jj_bankar[$i][0],"미국");
+for($i=0;$i<21;$i++){
+	$wr_find=strpos($wr_bankar[$i][0],"호주");
+	$sh_find=strpos($sh_bankar[$i][0],"호주");
+	$nh_find=strpos($nh_bankar[$i][0],"호주");
+	$ibk_find=strpos($ibk_bankar[$i][0],"호주");
+	$st_ch_find=strpos($st_ch_bankar[$i][0],"호주");
+	$shyup_find=strpos($shyup_bankar[$i][0],"호주");
+	$dg_find=strpos($dg_bankar[$i][0],"호주");
+	$jb_find=strpos($jb_bankar[$i][0],"호주");
+	$jj_find=strpos($jj_bankar[$i][0],"호주");
 	
 	if($wr_find!==false){
 		$wr_l=$wr_bankar[$i][1];
@@ -60,10 +67,6 @@ for($i=0;$i<3;$i++){
                 $st_ch_l=$st_ch_bankar[$i][1];
                 $st_ch_r=$st_ch_bankar[$i][2];
         }
-	if($citi_find!==false){
-		$citi_l=$citi_bankar[$i][1];
-                $citi_r=$citi_bankar[$i][2];
-        }
 	if($shyup_find!==false){
                 $shyup_l=$shyup_bankar[$i][1];
                 $shyup_r=$shyup_bankar[$i][2];
@@ -75,10 +78,6 @@ for($i=0;$i<3;$i++){
 	if($jb_find!==false){
                 $jb_l=$jb_bankar[$i][1];
                 $jb_r=$jb_bankar[$i][2];
-        }
-	if($kn_find!==false){
-               	$kn_l=$kn_bankar[$i][1];
-                $kn_r=$kn_bankar[$i][2];
         }
 	if($jj_find!==false){
                 $jj_l=$jj_bankar[$i][1];
@@ -93,6 +92,7 @@ for($i=0;$i<3;$i++){
 
         <body>
                 <table>
+	
                            <tr><td></td><td>살때</td><td>팔 때</td><td></td></tr>
       <tr><td>우리은행</td><td><?php echo $wr_l;?> </td><td><?php echo $wr_r;?> </td><td></td></tr>
       <tr><td>신한은행</td><td><?php echo $sh_l;?> </td><td><?php echo $sh_r;?> </td><td></td></tr>
