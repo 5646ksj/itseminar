@@ -45,8 +45,8 @@ for($i=0;$i<8;$i++){
                 $sh_r=$sh_bankar[$i][2];
         }
 	if($nh_find!==false){
-                $sh_l=$sh_bankar[$i][1];
-                $sh_r=$sh_bankar[$i][2];
+                $nh_l=$sh_bankar[$i][1];
+                $nh_r=$sh_bankar[$i][2];
         }
 	if($ibk_find!==false){
                 $ibk_l=$ibk_bankar[$i][1];
@@ -89,6 +89,7 @@ for($i=0;$i<8;$i++){
       <tr><td>우리은행</td><td><?php echo $wr_l;?> </td><td><?php echo $wr_r;?> </td><td></td></tr>
       <tr><td>신한은행</td><td><?php echo $sh_l;?> </td><td><?php echo $sh_r;?> </td><td></td></tr>
       <tr><td>농협</td><td><?php echo $nh_l;?> </td><td><?php echo $nh_r;?> </td><td></td></tr>
+	<tr><td>IBK은행</td><td><?php echo $ibk_l;?> </td><td><?php echo $ibk_r;?> </td><td></td></tr>
       <tr><td>SC 은행</td><td><?php echo $st_ch_l;?> </td><td><?php echo $st_ch_r;?> </td><td></td></tr>
       <tr><td>수협</td><td><?php echo $shyup_l;?> </td><td><?php echo $shyup_r;?> </td><td></td></tr>
       <tr><td>전북은행</td><td><?php echo $jb_l;?> </td><td><?php echo $jb_r;?> </td><td></td></tr>
