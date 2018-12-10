@@ -18,6 +18,6 @@ for i in range(0,23):
         list[i][2]=parse1[8*i+4]
 #print(list)
 fo=open('shyup_bank_sb.php','w')
-fo.write(','.join(map(str,list)))
+fo.write('\n'.join(map(str,list)))
 fo.close()
 

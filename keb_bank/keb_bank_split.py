@@ -12,7 +12,7 @@ body=body.group()
 bodys=body.split()
 text=re.sub('<.+?>','',body,0, re.I|re.S)
 text=re.sub('&nbsp;| |(\n){2}|\t','',text)
-print(text)
+print(type(text))
 f=open('keb_bank_list.py','w')
 f.write(text)
 f.close
